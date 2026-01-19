@@ -9,4 +9,5 @@ export const sedges: Plant[] = [{
         soilMoisture: ["wet", "med"],
         heightFt: {min: 3, max: 3},
         widthFt: {min: 1, max: 2},
+        svg: "/carex-grayi.svg",
 }];

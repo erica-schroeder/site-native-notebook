@@ -20,7 +20,7 @@ const pxPerFoot = drawableWidth / xFeetRange;
 
 const yFeetRange = drawableHeight / pxPerFoot;
 
-export default function PlantChart() {
+export const PlantChartMui = () => {
     return (
         <ChartContainer
             width={CHART_WIDTH}
@@ -55,4 +55,4 @@ export default function PlantChart() {
             <PlantRenderer plants={sortBy(plantsWithAverages, 'avgHeight').reverse()} pxPerFoot={pxPerFoot} />
         </ChartContainer>
     );
-}
+};

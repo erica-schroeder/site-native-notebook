@@ -1,29 +1,45 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 
-export function ScrollWrapper({ children }: { children: React.ReactNode }) {
+type Props = {
+  children: React.ReactNode;
+  baseWidth: number; // width of chart at zoom = 1
+  baseHeight: number; // height of chart at zoom = 1
+  minZoom?: number;
+  maxZoom?: number;
+};
+
+export function ScrollWrapper({
+  children,
+  baseWidth,
+  baseHeight,
+  minZoom = 0.5,
+  maxZoom = 3,
+}: Props) {
+  const containerRef = useRef<HTMLDivElement>(null);
+
   const startX = useRef(0);
   const startY = useRef(0);
   const startScrollX = useRef(0);
   const startScrollY = useRef(0);
 
+  const [zoom, setZoom] = useState(1);
+
+  // --- Ctrl + right-drag pan ---
   const onPointerDown = (e: React.PointerEvent) => {
-    // Only Ctrl + right click
-    if (e.button !== 2 || !e.ctrlKey) return;
+    if (e.button === 2 && e.ctrlKey) {
+      e.preventDefault();
 
-    e.preventDefault();
+      startX.current = e.clientX;
+      startY.current = e.clientY;
+      startScrollX.current = window.scrollX;
+      startScrollY.current = window.scrollY;
 
-    startX.current = e.clientX;
-    startY.current = e.clientY;
-    startScrollX.current = window.scrollX;
-    startScrollY.current = window.scrollY;
+      document.body.style.cursor = 'grabbing';
+      document.body.style.userSelect = 'none';
 
-    // Set grab cursor
-    document.body.style.cursor = 'grabbing';
-    document.body.style.userSelect = 'none';
-
-    // Capture the pointer events on the window
-    window.addEventListener('pointermove', onPointerMove);
-    window.addEventListener('pointerup', onPointerUp);
+      window.addEventListener('pointermove', onPointerMove);
+      window.addEventListener('pointerup', onPointerUp);
+    }
   };
 
   const onPointerMove = (e: PointerEvent) => {
@@ -37,22 +53,29 @@ export function ScrollWrapper({ children }: { children: React.ReactNode }) {
   };
 
   const onPointerUp = () => {
-    // Remove event listeners
     window.removeEventListener('pointermove', onPointerMove);
     window.removeEventListener('pointerup', onPointerUp);
 
-    // Restore cursor and text selection
     document.body.style.cursor = '';
     document.body.style.userSelect = '';
   };
 
   return (
     <div
+      ref={containerRef}
+      style={{ width: '100%', height: '100%' }}
       onPointerDown={onPointerDown}
       onContextMenu={(e) => e.preventDefault()}
-      style={{ width: '100%', height: '100%' }}
     >
-      {children}
+      <div
+        style={{
+          width: baseWidth * zoom,
+          height: baseHeight * zoom,
+          position: 'relative',
+        }}
+      >
+        {children}
+      </div>
     </div>
   );
 }
