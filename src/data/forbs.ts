@@ -67,4 +67,5 @@ export const forbs: Plant[] = [{
         soilMoisture: ["med", "dry"],
         heightFt: {min: .5, max: .5},
         widthFt: {min: .25, max: .83},
+        svg: "/fragaria-virginiana.svg",
 }];
