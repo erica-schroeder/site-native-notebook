@@ -17,6 +17,7 @@ export const App: React.FC = () => {
           sx={{ maxHeight: 100 }}
         />
       }
+      navItems={[]}
     >
       <Paper elevation={0} >
         <Routes>

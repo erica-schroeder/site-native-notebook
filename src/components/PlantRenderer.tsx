@@ -41,8 +41,8 @@ export const PlantRenderer = ({ plants, spacingFt=.5 }) => {
 
         // return SVG image or rectangle placeholder
         return (
-          <g key={p.id}>
-            {p.svg ? (
+            <g key={p.id}>
+              {p.svg ? (
               <image
                 key={p.id}
                 href={`${import.meta.env.BASE_URL}${p.svg}`}
@@ -50,7 +50,8 @@ export const PlantRenderer = ({ plants, spacingFt=.5 }) => {
                 y={topY}
                 width={widthPx}
                 height={heightPx}
-                preserveAspectRatio="xMidYMax meet"
+                preserveAspectRatio="none"
+                //preserveAspectRatio="xMidYMax meet"
               />
             ) : (
               <rect

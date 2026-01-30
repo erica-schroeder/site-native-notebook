@@ -38,39 +38,6 @@ let theme = createTheme({
     palette: palette,
     typography: {
             fontFamily: 'Open Sans',
-        h1: {
-            fontFamily: 'Alice',
-            fontWeight: 'bold',
-            fontSize: '2rem',
-            color: palette.heading.main,
-        },
-        h2: {
-            fontFamily: 'Alice',
-            fontWeight: 'bold',
-            fontSize: '1.5rem',
-            color: palette.heading.main,
-        },
-        h3: {
-            fontFamily: 'Alice',
-            fontWeight: 'bold',
-            color: palette.heading.main,
-        },
-        body1: {
-            textAlign: 'justify',
-            lineHeight: 1.8,
-        },
-        navItemPrimary: {
-            color: palette.appBar.contrastText,
-            fontFamily: 'Alice',
-            fontSize: '1.1rem',
-            fontWeight: 400,
-        },
-        navItemSecondary: {
-            color: palette.appBar.contrastText,
-            fontFamily: 'Alice',
-            fontSize: '1.1rem',
-            fontWeight: 400,
-        },
     },
     components: {
         MuiAppBar: {
