@@ -1,38 +1,31 @@
 import { PlantChartMui } from "@/components/PlantChartMui"
 import { AppBarNavLayout } from "@erica/mui-web"
-import { Box } from "@mui/material"
+import { Box, Paper } from "@mui/material"
 import type React from "react"
 import { Route, Routes } from "react-router"
+import Logo from "@/assets/logo.svg"
 
 
 export const App: React.FC = () => {
   return (
     <AppBarNavLayout
-      containerProps={{ maxWidth: false, sx: { flexGrow: 1, minWidth: 0 } }}
+      containerProps={{ disableGutters: true, maxWidth: false }}
       logo={
         <Box
-          width={50}
-          height={50}
-          sx={{ backgroundColor: 'blue', color: 'green' }}
+          component="img"
+          src={Logo}
+          sx={{ maxHeight: 100 }}
         />
       }
-      navItems={[{
-        label: 'Library', to: '/library'
-      }]}
     >
-      <Routes>
-        <Route path="/" element={
-          <Box
-            sx={{
-              flexGrow: 1,
-              overflow: 'scroll',
-            }}
-          >
+      <Paper elevation={0} >
+        <Routes>
+          <Route path="/" element={
             <PlantChartMui />
-          </Box>
-        }
-        />
-      </Routes>
+          }
+          />
+        </Routes>
+      </Paper>
     </AppBarNavLayout>
   );
 }

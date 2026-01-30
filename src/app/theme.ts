@@ -26,7 +26,7 @@ const palette = {
         paper: '#f8f8f8',
     },
     appBar: {
-        main: '#f4f1ea',
+        main: '#f8f8f8',
         contrastText: '#3a2a16',
     },
     heading: {

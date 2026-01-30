@@ -11,7 +11,7 @@ import {
 import { sortBy } from 'lodash-es';
 import { PlantRenderer } from './PlantRenderer';
 
-const MARGIN = { left: 60, right: 60, top: 20, bottom: 50 };
+const MARGIN = { left: 0, right: 70, top: 20, bottom: 150 };
 
 const TARGET_PX_PER_FOOT = 100;
 const SPACING_FT = .5;
@@ -57,15 +57,14 @@ export const PlantChartMui = () => {
     const pxPerFoot = usableWidth / widestRowFeet;
 
     return (
-        <Stack ref={containerRef} >
+        <Stack
+            ref={containerRef}
+            sx={{ px: 4 }}
+            onContextMenu={(e) => e.preventDefault()}
+        >
             {plantRows.map((rowPlants, rowIndex) => {
                 const maxPlantHeight = Math.max(...rowPlants.map(p => p.avgHeight ?? 0));
                 const yFeetRange = maxPlantHeight + 1;
-
-                const rowFeetWidth =
-                    rowPlants.reduce((sum, p) => sum + (p.avgWidth ?? 1), 0)
-                    + SPACING_FT * Math.max(0, rowPlants.length - 1);
-
 
                 const chartHeight = yFeetRange * pxPerFoot + MARGIN.top + MARGIN.bottom;
 
@@ -93,12 +92,13 @@ export const PlantChartMui = () => {
                                 min: 0,
                                 max: yFeetRange,
                                 tickMinStep: 1,
+                                tickMaxStep: 1,
                                 valueFormatter: (v) => `${v}′`,
                             },
                         ]}
                     >
-                        <ChartsXAxis label="Width (feet)" />
-                        <ChartsYAxis label="Height (feet)" />
+                        <ChartsXAxis />
+                        <ChartsYAxis />
 
                         <ChartsGrid horizontal />
 
