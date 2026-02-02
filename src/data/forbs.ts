@@ -135,4 +135,18 @@ export const forbs: Plant[] = [{
              heightFt: 4,
              widthFt: 2,
         },
+},{
+        id: "geum-triflorum",
+        scientificName: "Geum triflorum",
+        commonName: "Prairie Smoke",
+        plantType: "forb",
+        sun: ["full"],
+        soilMoisture: ["med", "dry"],
+        heightFt: {min: .5, max: .75},
+        widthFt: {min: .5, max: .75},
+        illustration: {
+             svg: "geum-triflorum.svg",
+             heightFt: .58,
+             widthFt: .58,
+        },
 }];
