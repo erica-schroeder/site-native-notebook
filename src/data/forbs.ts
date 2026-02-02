@@ -9,6 +9,7 @@ export const forbs: Plant[] = [{
         soilMoisture: ["dry", "med"],
         heightFt: {min: 2, max: 2},
         widthFt: {min: 1, max: 3},
+        flowerColor: ["orange"],
         illustration: {
              svg: "asclepias-tuberosa.svg",
              heightFt: 2,
@@ -23,6 +24,7 @@ export const forbs: Plant[] = [{
         soilMoisture: ["wet", "med"],
         heightFt: {min: 4, max: 4},
         widthFt: {min: 1.5, max: 3},
+        flowerColor: ["pink"],
         illustration: {
              svg: "asclepias-incarnata.svg",
              heightFt: 4,
@@ -37,6 +39,7 @@ export const forbs: Plant[] = [{
         soilMoisture: ["dry", "med"],
         heightFt: {min: 2, max: 2.5},
         widthFt: {min: 1, max: 2},
+        flowerColor: ["pink", "white"],
         illustration: {
              svg: "monarda-punctata.svg",
              heightFt: 2.25,
@@ -51,6 +54,7 @@ export const forbs: Plant[] = [{
         soilMoisture: ["dry", "med"],
         heightFt: {min: 2, max: 2.5},
         widthFt: {min: 1.5, max: 2},
+        flowerColor: ["purple"],
         illustration: {
              svg: "dalea-purpurea.svg",
              heightFt: 2.25,
@@ -74,6 +78,7 @@ export const forbs: Plant[] = [{
         soilMoisture: ["med"],
         heightFt: {min: 6, max: 9},
         widthFt: {min: 3, max: 5},
+        flowerColor: ["yellow"],
         illustration: {
              svg: "silphium-perfoliatum.svg",
              heightFt: 7.5,
@@ -88,6 +93,7 @@ export const forbs: Plant[] = [{
         soilMoisture: ["med", "dry"],
         heightFt: {min: .5, max: .5},
         widthFt: {min: .25, max: .83},
+        flowerColor: ["white"],
         illustration: {
              svg: "fragaria-virginiana.svg",
              heightFt: .5,
@@ -102,6 +108,7 @@ export const forbs: Plant[] = [{
         soilMoisture: ["med", "dry"],
         heightFt: {min: 4, max: 4},
         widthFt: {min: 1.5, max: 2},
+        flowerColor: ["purple"],
         illustration: {
              svg: "echinacea-purpurea.svg",
              heightFt: 4,
@@ -116,6 +123,7 @@ export const forbs: Plant[] = [{
         soilMoisture: ["wet", "med"],
         heightFt: {min: 4, max: 6},
         widthFt: {min: 2, max: 2},
+        flowerColor: ["pink", "purple"],
         illustration: {
              svg: "liatris-spicata.svg",
              heightFt: 5,
@@ -130,6 +138,7 @@ export const forbs: Plant[] = [{
         soilMoisture: ["med", "dry"],
         heightFt: {min: 3, max: 6},
         widthFt: {min: 1, max: 3},
+        flowerColor: ["yellow"],
         illustration: {
              svg: "solidago-speciosa.svg",
              heightFt: 4,
@@ -144,6 +153,7 @@ export const forbs: Plant[] = [{
         soilMoisture: ["med", "dry"],
         heightFt: {min: .5, max: .75},
         widthFt: {min: .5, max: .75},
+        flowerColor: ["pink"],
         illustration: {
              svg: "geum-triflorum.svg",
              heightFt: .58,

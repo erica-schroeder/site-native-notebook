@@ -1,6 +1,7 @@
 export type SoilMoisture = "dry" | "med" | "wet";
 export type SunLevel = "full" | "part" | "shade";
 export type PlantType = "forb" | "grass" | "sedge" | "shrub" | "tree";
+export type Color = "red" | "orange" | "yellow" | "green" | "blue" | "purple" | "pink" | "white";
 
 export type Plant = {
     id: string;
@@ -9,6 +10,7 @@ export type Plant = {
     plantType: PlantType;
     sun: SunLevel[];
     soilMoisture: SoilMoisture[];
+    flowerColor?: Color[];
     heightFt: {
         min: number;
         max: number;

@@ -1,4 +1,4 @@
-import { plantsWithAverages } from '@/data/plants';
+import { useChartFilter } from '@/contexts/ChartFilterProvider';
 import { useContainerWidth } from '@/hooks/useContainerWidth';
 import type { Plant } from '@/types/plant';
 import { Button, Stack, useMediaQuery, useTheme } from '@mui/material';
@@ -9,10 +9,8 @@ import {
     ChartsYAxis,
 } from '@mui/x-charts';
 import { sortBy } from 'lodash-es';
-import { PlantRenderer } from './PlantRenderer';
 import { useMemo, useState } from 'react';
-import { PlantSearch } from './PlantSearch';
-import { useChartFilter } from '@/contexts/ChartFilterProvider';
+import { PlantRenderer } from './PlantRenderer';
 
 const MARGIN = { left: 0, right: 70, top: 20, bottom: 150 };
 const SPACING_FT = .5;
@@ -25,16 +23,20 @@ function splitPlantsIntoRows(plants: Plant[], maxFeetPerRow: number) {
     const sortedPlants = sortBy(plants, 'avgHeight').reverse();
 
     for (const plant of sortedPlants) {
-        const plantWidth = plant.avgWidth ?? 1 + SPACING_FT;
+        const plantWidth = (plant.avgWidth ?? 1);
+        const nextWidth =
+            currentRow.length === 0
+                ? plantWidth
+                : plantWidth + SPACING_FT;
 
-        if (currentFeet + plantWidth > maxFeetPerRow && currentRow.length > 0) {
+        if (currentFeet + nextWidth > maxFeetPerRow) {
             rows.push(currentRow);
             currentRow = [];
             currentFeet = 0;
         }
 
         currentRow.push(plant);
-        currentFeet += plantWidth;
+        currentFeet += nextWidth;
     }
 
     if (currentRow.length > 0) rows.push(currentRow);
@@ -72,7 +74,7 @@ export const PlantChartMui = () => {
         )
     );
 
-    const pxPerFoot = usableWidth / widestRowFeet;
+    const pxPerFoot = effectivePxPerFoot;//usableWidth / widestRowFeet;
 
     return (
         <Stack
@@ -86,14 +88,14 @@ export const PlantChartMui = () => {
             </Stack>
             {plantRows.map((rowPlants, rowIndex) => {
                 const maxPlantHeight = Math.max(...rowPlants.map(p => p.heightFt.max ?? 0));
-                const yFeetRange = maxPlantHeight + 1;
+                const yFeetRange = maxPlantHeight + .5;
 
                 const chartHeight = yFeetRange * pxPerFoot + MARGIN.top + MARGIN.bottom;
 
                 return (
                     <ChartContainer
                         key={rowIndex}
-                        width={containerWidth}
+                        width={maxFeetPerRow * pxPerFoot + MARGIN.left + MARGIN.right}
                         height={chartHeight}
                         margin={MARGIN}
                         xAxis={[
@@ -101,7 +103,7 @@ export const PlantChartMui = () => {
                                 id: 'x',
                                 scaleType: 'linear',
                                 min: 0,
-                                max: widestRowFeet,
+                                max: maxFeetPerRow,
                                 tickMinStep: 1,
                                 tickMaxStep: 1,
                                 tickLabelStyle: { display: "none" },
