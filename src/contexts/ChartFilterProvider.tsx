@@ -6,12 +6,15 @@ import { createContext, type ReactNode, useContext, useMemo, useState } from "re
 
 const ChartFilterContext = createContext(null);
 
+const emptyFilters = {
+    searchQuery: '',
+    flowerColors: undefined,
+    heightRange: [0, 10],
+};
+
 export const ChartFilterProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [filteredPlants, setFilteredPlants] = useState<Plant[]>(plantsWithAverages);
-  const [filters, setFilters] = useState<PlantFilters>({
-    searchQuery: '',
-    heightRange: [0, 10],
-  });
+  const [filters, setFilters] = useState<PlantFilters>(emptyFilters);
 
   // Fuse initialized once per plant list
   const fuse = useMemo(() => {
@@ -51,9 +54,15 @@ export const ChartFilterProvider: React.FC<{ children: ReactNode }> = ({ childre
     setFilteredPlants(result);
   };
 
+  const clearFilters = () => {
+    setFilteredPlants(plantsWithAverages);
+    setFilters(emptyFilters);
+  };
+
   const value = {
     filters,
     applyFilters,
+    clearFilters,
     setSearchQuery: (searchQuery: string) => setFilters(f => ({ ...f, searchQuery })),
     setFlowerColors: (flowerColors: Color[]) => setFilters(f => ({ ...f, flowerColors })),
     setHeightRange: (heightRange: [number, number]) => setFilters(f => ({ ...f, heightRange })),

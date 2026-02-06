@@ -7,7 +7,7 @@ import { Stack } from "@mui/material";
 export const PlantChartPage = () => {
 
     return (
-        <Stack sx={{ p: 4 }}>
+        <Stack sx={{ px: 4 }}>
             <ChartFilterProvider>
                 <PlantSearch allPlants={plantsWithAverages} />
                 <PlantChartMui />

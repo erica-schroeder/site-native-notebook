@@ -159,4 +159,19 @@ export const forbs: Plant[] = [{
              heightFt: .58,
              widthFt: .58,
         },
+},{
+        id: "penstemon-hirsutus",
+        scientificName: "Penstemon hirsutus",
+        commonName: "Hairy Beardtongue",
+        plantType: "forb",
+        sun: ["full, part"],
+        soilMoisture: ["med", "dry"],
+        heightFt: {min: 1, max: 2},
+        widthFt: {min: 1, max: 1},
+        flowerColor: ["purple"],
+        illustration: {
+             svg: "penstemon-hirsutus.svg",
+             heightFt: 1.5,
+             widthFt: 1,
+        },
 }];

@@ -6,18 +6,18 @@ import { HeightRangeSlider } from './HeightRangeSlider';
 
 
 export const PlantSearch: React.FC = () => {
-  const { filters, applyFilters, setSearchQuery, setFlowerColors, setHeightRange } = useChartFilter();
+  const { filters, applyFilters, clearFilters, setSearchQuery, setFlowerColors, setHeightRange } = useChartFilter();
 
   return (
-    <Stack spacing={2}>
-      <Stack direction="row" spacing={4} alignItems="center" sx={{ pb: 2 }}>
+    <Stack spacing={0} alignItems={"center"}>
+      <Stack direction="row" spacing={4} alignItems="center" sx={{ pb: 2}}>
         <TextField
           label="Common/scientific name contains"
           value={filters.searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           variant="outlined"
           size="small"
-          fullWidth
+          sx={{ minWidth: "40ch" }}
         />
 
         <FlowerColorSelect
@@ -31,13 +31,24 @@ export const PlantSearch: React.FC = () => {
         />
       </Stack>
 
-      <Button
-      variant="contained"
-      onClick={applyFilters}
-      fullWidth={false}
-      >
-        Search
-      </Button>
+      <Stack direction="row" spacing={2}>
+        <Button
+          variant="contained"
+          disableElevation
+          onClick={applyFilters}
+          fullWidth={false}
+        >
+          Search
+        </Button>
+
+        <Button
+          variant="outlined"
+          onClick={clearFilters}
+          fullWidth={false}
+        >
+          Clear
+        </Button>
+      </Stack>
     </Stack>
   );
 };
