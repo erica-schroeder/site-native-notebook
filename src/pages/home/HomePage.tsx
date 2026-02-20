@@ -26,7 +26,7 @@ export const HomePage = () => {
 
         {/* Intro paragraph */}
         <Typography variant="body1">
-          Thanks for visiting! This site is designed to help you explore and compare <strong>Michigan native plants</strong>. You can browse plants by height, bloom color, sun and soil needs, and more.
+          Thanks for visiting! This site is designed to help you explore and compare <strong>Michigan native plants</strong>. Browse and compare plants by height, bloom color, sun and soil needs, and more.
         </Typography>
 
 
@@ -56,11 +56,11 @@ export const HomePage = () => {
         {/* Call-to-action button */}
         <Button
           variant="contained"
-          color="success"
           size="large"
+          fullWidth="false"
           onClick={() => navigate("/plant-chart")}
         >
-          🌿 Explore the Chart →
+          Explore the Chart →
         </Button>
       </Stack>
     </Box>

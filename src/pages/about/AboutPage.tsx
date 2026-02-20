@@ -53,7 +53,7 @@ export const AboutPage = () => {
         </Typography>
 
         <Typography>
-          — Erica
+          - Erica
         </Typography>
       </Stack>
     </Box>

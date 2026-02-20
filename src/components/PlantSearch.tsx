@@ -79,19 +79,10 @@ export const PlantSearch: React.FC = () => {
       <Stack direction="row" spacing={2} justifyContent="center">
         <Button
           variant="contained"
-          disableElevation
-          onClick={applyFilters}
-          fullWidth={false}
-        >
-          Search
-        </Button>
-
-        <Button
-          variant="outlined"
           onClick={clearFilters}
           fullWidth={false}
         >
-          Clear
+          Clear Filters
         </Button>
       </Stack>
     </Stack>

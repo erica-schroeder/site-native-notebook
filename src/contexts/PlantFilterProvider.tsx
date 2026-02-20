@@ -2,7 +2,8 @@ import { plantsWithAverages } from "@/data/plants";
 import type { Color, Plant, SoilMoisture, SunLevel } from "@/types/plant";
 import type { PlantFilters } from "@/types/plantFilters";
 import Fuse from "fuse.js";
-import { createContext, type ReactNode, useContext, useMemo, useState } from "react";
+import { createContext, type ReactNode, useContext, useEffect, useMemo, useState } from "react";
+import { isEqual } from 'lodash-es';
 
 const PlantFilterContext = createContext(null);
 
@@ -16,7 +17,11 @@ const emptyFilters = {
 
 export const PlantFilterProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [filteredPlants, setFilteredPlants] = useState<Plant[]>(plantsWithAverages);
-  const [filters, setFilters] = useState<PlantFilters>(emptyFilters);
+  const [filters, setFilters] = useState<PlantFilters>({...emptyFilters, searchQuery: 'asclepias'});
+
+  useEffect(() => {
+    applyFilters();
+  }, [filters]);
 
   // Fuse initialized once per plant list
   const fuse = useMemo(() => {
@@ -89,6 +94,7 @@ export const PlantFilterProvider: React.FC<{ children: ReactNode }> = ({ childre
     setSoilMoistures: (soilMoistures: SoilMoisture[]) => setFilters(f => ({ ...f, soilMoistures })),
     setHeightRange: (heightRange: [number, number]) => setFilters(f => ({ ...f, heightRange })),
     filteredPlants,
+    areFiltersEmpty: () => isEqual(filters, emptyFilters),
   };
 
   return (

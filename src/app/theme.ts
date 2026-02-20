@@ -21,23 +21,36 @@ const palette = {
         main: '#6750A4',
         contrastText: '#FFFFFF',
     },
+    text: {
+        primary: '#333333',   // dark gray
+        secondary: '#555555', // medium gray
+    },
     background: {
-        default: '#f8f8f8',
-        paper: '#f8f8f8',
+        default: '#FAF9F6',
+        paper: '#FAF9F6',
     },
     appBar: {
-        main: '#f8f8f8',
+        main: '#ECECE4',
         contrastText: '#3a2a16',
     },
-    heading: {
-        main: '#3a2a16',
-    }
 };
 
 let theme = createTheme({
     palette: palette,
     typography: {
-            fontFamily: 'Open Sans',
+        fontFamily: 'Inter',
+        h1: { fontFamily: 'Domine, serif', fontWeight: 700 },
+        h2: { fontFamily: 'Domine, serif', fontWeight: 700 },
+        h3: { fontFamily: 'Domine, serif', fontWeight: 700 },
+        h4: { fontFamily: 'Domine, serif', fontWeight: 700 },
+        h5: { fontFamily: 'Domine, serif', fontWeight: 700 },
+        h6: { fontFamily: 'Domine, serif', fontWeight: 700 },
+        navItemPrimary: {
+            color: palette.appBar.contrastText,
+            fontFamily: 'Domine',
+            fontSize: '1rem',
+            fontWeight: 700,
+        },
     },
     components: {
         MuiAppBar: {
