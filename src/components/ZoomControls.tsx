@@ -1,4 +1,4 @@
-import { useZoom } from "@/contexts/ZoomProvider";
+import { useZoom } from "@/contexts/ZoomContext";
 import ReplayIcon from '@mui/icons-material/Replay';
 import ZoomInIcon from "@mui/icons-material/ZoomIn";
 import ZoomOutIcon from "@mui/icons-material/ZoomOut";

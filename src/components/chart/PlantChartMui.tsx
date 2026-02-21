@@ -1,7 +1,7 @@
 import { PlantRenderer } from '@/components/chart/PlantRenderer';
-import { PlantDetailDisplayProvider } from '@/contexts/PlantDetailDisplayProvider';
-import { usePlantFilter } from '@/contexts/PlantFilterProvider';
-import { useZoom } from '@/contexts/ZoomProvider';
+import { PlantDetailDisplayProvider } from '@/contexts/PlantDetailDisplayContext';
+import { usePlantFilter } from '@/contexts/PlantFilterContext';
+import { useZoom } from '@/contexts/ZoomContext';
 import { useContainerWidth } from '@/hooks/useContainerWidth';
 import type { Plant } from '@/types/plant';
 import { Stack, useMediaQuery, useTheme } from '@mui/material';

@@ -1,4 +1,4 @@
-import { usePlantFilter } from '@/contexts/PlantFilterProvider';
+import { usePlantFilter } from '@/contexts/PlantFilterContext';
 import { Button, FormControl, FormLabel, Stack } from '@mui/material';
 import React from 'react';
 import { FlowerColorSelect } from '../filter/FlowerColorSelect';
@@ -6,6 +6,7 @@ import { HeightRangeSlider } from '../filter/HeightRangeSlider';
 import { PlantNameSearch } from '../filter/PlantNameSearch';
 import { SoilMoistureSelect } from '../filter/SoilMoistureSelect';
 import { SunLevelSelect } from '../filter/SunLevelSelect';
+import { TraitSelect } from '../filter/TraitSelect';
 
 const Label = (props) =>
   <FormLabel
@@ -46,7 +47,7 @@ export const PlantSearchXs: React.FC = () => {
         <FlowerColorSelect size="small" />
       </FormControl>
 
-      <Stack direction="row" spacing={5} alignItems="center" justifyContent="center">
+      <Stack direction="row" alignItems="center" justifyContent="space-between">
         <FormControl>
           <Label>
             Sun Level
@@ -59,6 +60,13 @@ export const PlantSearchXs: React.FC = () => {
             Soil Moisture
           </Label>
           <SoilMoistureSelect size="small" />
+        </FormControl>
+
+        <FormControl>
+          <Label>
+            Traits
+          </Label>
+          <TraitSelect size="small" />
         </FormControl>
       </Stack>
 

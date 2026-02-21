@@ -1,4 +1,4 @@
-import { usePlantFilter } from '@/contexts/PlantFilterProvider';
+import { usePlantFilter } from '@/contexts/PlantFilterContext';
 import { Slider } from '@mui/material';
 
 const MIN_HEIGHT = 0;

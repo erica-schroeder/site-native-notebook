@@ -1,6 +1,6 @@
 import { ChartsSurface, useXScale, useYScale } from '@mui/x-charts';
 import { PlantLabel } from './PlantLabel';
-import { usePlantDetailDisplay } from '@/contexts/PlantDetailDisplayProvider';
+import { usePlantDetailDisplay } from '@/contexts/PlantDetailDisplayContext';
 
 export const PlantRenderer = ({ plants, spacingFt=.5 }) => {
   const { setActivePlant } = usePlantDetailDisplay();

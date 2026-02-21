@@ -1,4 +1,4 @@
-import { usePlantFilter } from "@/contexts/PlantFilterProvider";
+import { usePlantFilter } from "@/contexts/PlantFilterContext";
 import { TextField } from "@mui/material";
 
 export const PlantNameSearch = ({...props}) => {

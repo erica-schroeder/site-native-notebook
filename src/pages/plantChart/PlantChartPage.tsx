@@ -1,8 +1,8 @@
 import { PlantChartMui } from "@/components/chart/PlantChartMui";
 import { PlantSearch } from "@/components/plantSearch/PlantSearch";
 import { ZoomControls } from "@/components/ZoomControls";
-import { PlantFilterProvider, usePlantFilter } from "@/contexts/PlantFilterProvider";
-import { ZoomProvider } from "@/contexts/ZoomProvider";
+import { PlantFilterProvider, usePlantFilter } from "@/contexts/PlantFilterContext";
+import { ZoomProvider } from "@/contexts/ZoomContext";
 import { plantsWithAverages } from "@/data/plants";
 import { Box, Stack, Typography } from "@mui/material";
 
@@ -38,6 +38,7 @@ const PlantChartPageContent = () => {
                 }
 
 
+{/*
                 <Box
                     sx={{
                         position: "fixed",
@@ -57,6 +58,7 @@ const PlantChartPageContent = () => {
                 >
                     <ZoomControls />
                 </Box>
+                */}
             </ZoomProvider>
         </Stack>
     );

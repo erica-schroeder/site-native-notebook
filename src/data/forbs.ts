@@ -94,6 +94,9 @@ export const forbs: Plant[] = [{
         heightFt: {min: .5, max: .5},
         widthFt: {min: .25, max: .83},
         flowerColor: ["white"],
+        traits: {
+             keystone: true,
+        },
         illustration: {
              svg: "fragaria-virginiana.svg",
              heightFt: .5,
@@ -139,6 +142,9 @@ export const forbs: Plant[] = [{
         heightFt: {min: 3, max: 6},
         widthFt: {min: 1, max: 3},
         flowerColor: ["yellow"],
+        traits: {
+             keystone: true,
+        },
         illustration: {
              svg: "solidago-speciosa.svg",
              heightFt: 4,

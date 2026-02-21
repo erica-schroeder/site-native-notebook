@@ -6,6 +6,7 @@ import { AppBarNavLayout } from "@erica/mui-web"
 import { Paper, Typography } from "@mui/material"
 import type React from "react"
 import { Route, Routes } from "react-router"
+import { Footer } from "./Footer"
 
 
 export const App: React.FC = () => {
@@ -18,8 +19,9 @@ export const App: React.FC = () => {
         { label: "Plant Chart", to: "/plant-chart", },
       ]}
       navItemDivider={
-      <Typography>•</Typography>
-    }
+        <Typography>•</Typography>
+      }
+      footer={<Footer />}
     >
       <Paper elevation={0} >
         <Routes>

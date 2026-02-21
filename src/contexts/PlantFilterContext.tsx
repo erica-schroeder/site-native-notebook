@@ -1,6 +1,6 @@
 import { plantsWithAverages } from "@/data/plants";
 import type { Color, Plant, SoilMoisture, SunLevel } from "@/types/plant";
-import type { PlantFilters } from "@/types/plantFilters";
+import type { PlantFilters, Trait } from "@/types/plantFilters";
 import Fuse from "fuse.js";
 import { createContext, type ReactNode, useContext, useEffect, useMemo, useState } from "react";
 import { isEqual } from 'lodash-es';
@@ -9,10 +9,11 @@ const PlantFilterContext = createContext(null);
 
 const emptyFilters = {
     searchQuery: '',
-    flowerColors: undefined,
+    flowerColors: [],
     heightRange: [0, 10],
     sunLevels: [],
     soilMoistures: [],
+    traits: [],
 };
 
 export const PlantFilterProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
@@ -42,7 +43,7 @@ export const PlantFilterProvider: React.FC<{ children: ReactNode }> = ({ childre
     }
 
     // Flower color filter
-    if (filters.flowerColors?.length > 0) {
+    if (filters.flowerColors.length > 0) {
       result = result.filter(p =>
         p.flowerColor?.some(c =>
           filters.flowerColors.includes(c)
@@ -76,6 +77,13 @@ export const PlantFilterProvider: React.FC<{ children: ReactNode }> = ({ childre
       );
     }
 
+    // Traits filter
+    if (filters.traits?.length > 0) {
+      result = result.filter(p =>
+        filters.traits.every(trait => p.traits?.[trait])
+      );
+    }
+
     setFilteredPlants(result);
   };
 
@@ -93,6 +101,7 @@ export const PlantFilterProvider: React.FC<{ children: ReactNode }> = ({ childre
     setSunLevels: (sunLevels: SunLevel[]) => setFilters(f => ({ ...f, sunLevels })),
     setSoilMoistures: (soilMoistures: SoilMoisture[]) => setFilters(f => ({ ...f, soilMoistures })),
     setHeightRange: (heightRange: [number, number]) => setFilters(f => ({ ...f, heightRange })),
+    setTraits: (traits: Trait[]) => setFilters(f => ({ ...f, traits })),
     filteredPlants,
     areFiltersEmpty: () => isEqual(filters, emptyFilters),
   };

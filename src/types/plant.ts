@@ -3,6 +3,10 @@ export type SunLevel = "full" | "part" | "shade";
 export type PlantType = "forb" | "grass" | "sedge" | "shrub" | "tree";
 export type Color = "red" | "orange" | "yellow" | "green" | "blue" | "purple" | "pink" | "white";
 
+export type Traits = {
+    keystone?: boolean;
+}
+
 export type Plant = {
     id: string;
     commonName: string;
@@ -24,4 +28,5 @@ export type Plant = {
         heightFt: number;
         widthFt: number;
     };
+    traits?: Traits;
 };

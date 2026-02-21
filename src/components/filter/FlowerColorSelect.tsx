@@ -1,39 +1,50 @@
-import { usePlantFilter } from '@/contexts/PlantFilterProvider';
-import type { Color } from '@/types/plant';
-import {
-    ToggleButton,
-    ToggleButtonGroup,
-    Tooltip
-} from '@mui/material';
+import { usePlantFilter } from '@/contexts/PlantFilterContext';
+import { iconMap } from '@/theme/icons';
+import { ToggleButtonFilter } from './ToggleButtonFilter';
 
-
-const FLOWER_COLORS: { label: string; value: Color }[] = [
-    { value: 'red', label: 'Red' },
-    { value: 'orange', label: 'Orange' },
-    { value: 'yellow', label: 'Yellow' },
-    { value: 'green', label: 'Green' },
-    { value: 'blue', label: 'Blue' },
-    { value: 'purple', label: 'Purple' },
-    { value: 'pink', label: 'Pink' },
-    { value: 'white', label: 'White' },
-];
+const options = [{
+    value: 'red',
+    tooltip: 'Red',
+    icon: iconMap.flowerColor.red,
+}, {
+    value: 'orange',
+    tooltip: 'Orange',
+    icon: iconMap.flowerColor.orange,
+}, {
+    value: 'yellow',
+    tooltip: 'Yellow',
+    icon: iconMap.flowerColor.yellow,
+}, {
+    value: 'green',
+    tooltip: 'Green',
+    icon: iconMap.flowerColor.green,
+}, {
+    value: 'blue',
+    tooltip: 'Blue',
+    icon: iconMap.flowerColor.blue,
+}, {
+    value: 'purple',
+    tooltip: 'Purple',
+    icon: iconMap.flowerColor.purple,
+}, {
+    value: 'pink',
+    tooltip: 'Pink',
+    icon: iconMap.flowerColor.pink,
+}, {
+    value: 'white',
+    tooltip: 'White',
+    icon: iconMap.flowerColor.white,
+}];
 
 export function FlowerColorSelect({ ...props }) {
     const { filters, setFlowerColors } = usePlantFilter();
 
     return (
-        <ToggleButtonGroup
+        <ToggleButtonFilter
+            options={options}
             value={filters.flowerColors}
             onChange={(_, value) => setFlowerColors(value)}
             {...props}
-        >
-            {FLOWER_COLORS.map(color =>
-                <ToggleButton value={color.value}>
-                    <Tooltip title={color.label}>
-                        <img src={`icons/flower-${color.value}-icon.svg`} width={30} height={20} style={{ transform: "scale(1.2)", display: "block" }} />
-                    </Tooltip>
-                </ToggleButton>
-            )}
-        </ToggleButtonGroup>
+        />
     );
-}
+};
