@@ -1,13 +1,9 @@
 import EmailLink from "@/components/EmailLink";
-import { Box, Stack, Typography, Button, Link } from "@mui/material";
+import { Box, Button, Stack, Typography } from "@mui/material";
 import { useNavigate } from "react-router";
 
 export const HomePage = () => {
   const navigate = useNavigate();
-
-    const user = "hello";
-    const domain = "nativenotebook.org";
-    const email = `${user}@${domain}`;
 
   return (
     <Box
@@ -26,7 +22,7 @@ export const HomePage = () => {
 
         {/* Intro paragraph */}
         <Typography variant="body1">
-          Thanks for visiting! This site is designed to help you explore and compare <strong>Michigan native plants</strong>. Browse and compare plants by height, bloom color, sun and soil needs, and more.
+          Thanks for visiting! This site is designed to help you explore and compare <strong>Michigan native plants</strong>. Browse plants by height, bloom color, sun and soil needs, and more.
         </Typography>
 
 
@@ -57,7 +53,6 @@ export const HomePage = () => {
         <Button
           variant="contained"
           size="large"
-          fullWidth="false"
           onClick={() => navigate("/plant-chart")}
         >
           Explore the Chart →

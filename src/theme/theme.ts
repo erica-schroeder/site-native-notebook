@@ -54,13 +54,17 @@ let theme = createTheme({
     },
     components: {
         MuiAppBar: {
-            defaultProps: {
-                elevation: 0
-            },
             styleOverrides: {
                 root: {
                     backgroundColor: palette.appBar.main,
                     color: palette.appBar.contrastText,
+                    boxShadow: "none",
+                },
+            },
+        },
+        MuiButton: {
+            styleOverrides: {
+                root: {
                     boxShadow: "none",
                 },
             },

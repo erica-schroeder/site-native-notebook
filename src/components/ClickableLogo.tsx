@@ -12,7 +12,7 @@ export const ClickableLogo: React.FC = () => {
             alt="Logo"
             onClick={() => navigate("/")}
             sx={{
-                maxHeight: 100,
+                maxHeight: {xs: 80, md: 100},
                 maxWidth: "100%",
                 cursor: 'pointer',
             }}
