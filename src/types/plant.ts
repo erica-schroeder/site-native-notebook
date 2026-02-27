@@ -29,4 +29,5 @@ export type Plant = {
         widthFt: number;
     };
     traits?: Traits;
+    hostCaterpillars?: string[];
 };

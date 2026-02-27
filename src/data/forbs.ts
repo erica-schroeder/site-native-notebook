@@ -10,6 +10,9 @@ export const forbs: Plant[] = [{
         heightFt: {min: 2, max: 2},
         widthFt: {min: 1, max: 3},
         flowerColor: ["orange"],
+        hostCaterpillars: [
+          "danaus-plexippus"
+        ],
         illustration: {
              svg: "asclepias-tuberosa.svg",
              heightFt: 2,
@@ -25,11 +28,27 @@ export const forbs: Plant[] = [{
         heightFt: {min: 4, max: 4},
         widthFt: {min: 1.5, max: 3},
         flowerColor: ["pink"],
+        hostCaterpillars: [
+          "danaus-plexippus"
+        ],
         illustration: {
              svg: "asclepias-incarnata.svg",
              heightFt: 4,
              widthFt: 2.25,
         },
+},{
+        id: "asclepias-exaltata",
+        scientificName: "Asclepias exaltata",
+        commonName: "Poke Milkweed",
+        plantType: "forb",
+        sun: ["part", "shade"],
+        soilMoisture: ["med"],
+        heightFt: {min: 3, max: 5},
+        widthFt: {min: 2, max: 2},
+        flowerColor: ["white"],
+        hostCaterpillars: [
+          "danaus-plexippus"
+        ],
 },{
         id: "monarda-punctata",
         scientificName: "Monarda punctata",

@@ -20,7 +20,6 @@ export const TraitSelect = ({ size }: TraitFilterProps) => {
     const { filters, setTraits } = usePlantFilter();
     const [dialogOpen, setDialogOpen] = useState(false);
 
-    console.log("size is ", size)
     return (
         <>
             <FormControl>

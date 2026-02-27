@@ -14,6 +14,7 @@ const emptyFilters = {
     sunLevels: [],
     soilMoistures: [],
     traits: [],
+    caterpillars: [],
 };
 
 export const PlantFilterProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
@@ -84,6 +85,15 @@ export const PlantFilterProvider: React.FC<{ children: ReactNode }> = ({ childre
       );
     }
 
+    // Caterpillar filter
+    if (filters.caterpillars?.length > 0) {
+      result = result.filter(p =>
+        p.hostCaterpillars?.some(c =>
+          filters.caterpillars.includes(c)
+        )
+      );
+    }
+
     setFilteredPlants(result);
   };
 
@@ -102,6 +112,7 @@ export const PlantFilterProvider: React.FC<{ children: ReactNode }> = ({ childre
     setSoilMoistures: (soilMoistures: SoilMoisture[]) => setFilters(f => ({ ...f, soilMoistures })),
     setHeightRange: (heightRange: [number, number]) => setFilters(f => ({ ...f, heightRange })),
     setTraits: (traits: Trait[]) => setFilters(f => ({ ...f, traits })),
+    setCaterpillars: (caterpillars: string[]) => setFilters(f => ({ ...f, caterpillars })),
     filteredPlants,
     areFiltersEmpty: () => isEqual(filters, emptyFilters),
   };

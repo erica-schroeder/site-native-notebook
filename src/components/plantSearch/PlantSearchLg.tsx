@@ -7,13 +7,14 @@ import { PlantNameSearch } from '../filter/PlantNameSearch';
 import { SoilMoistureSelect } from '../filter/SoilMoistureSelect';
 import { SunLevelSelect } from '../filter/SunLevelSelect';
 import { TraitSelect } from '../filter/TraitSelect';
+import { HostPlantSelect } from '../filter/HostPlantSelect';
 
 export const PlantSearchLg: React.FC = () => {
   const { clearFilters } = usePlantFilter();
 
   return (
     <Stack spacing={1} alignItems={"stretch"} sx={{ maxWidth: 800 }}>
-      <Stack direction={{xs: "column", sm: "row"}} spacing={5} alignItems="center" justifyContent="space-between" sx={{ pb: 2 }}>
+      <Stack direction="row" spacing={5} alignItems="center" justifyContent="space-between" sx={{ pb: 2 }}>
 
         <FormControl>
           <FormLabel>
@@ -26,7 +27,7 @@ export const PlantSearchLg: React.FC = () => {
 
       </Stack>
 
-      <Stack direction={{xs: "column", sm: "row"}} spacing={5} alignItems="center" justifyContent="space-between" sx={{ pb: 2 }}>
+      <Stack direction="row" spacing={5} alignItems="center" justifyContent="space-between" sx={{ pb: 2 }}>
         <FormControl sx={{ minWidth: 300, pr: 1 }}>
           <FormLabel sx={{ mb: -1 }}>
             Height Range (feet)
@@ -39,9 +40,11 @@ export const PlantSearchLg: React.FC = () => {
 
       </Stack>
 
-      <Stack direction={{ xs: "column", sm: "row" }} spacing={5} alignItems="center" justifyContent="space-between" sx={{ pb: 2 }}>
-          <TraitSelect />
+      <Stack direction="row" spacing={5} alignItems="center" justifyContent="center" sx={{ pb: 2 }}>
+        <TraitSelect />
+        <HostPlantSelect />
       </Stack>
+
 
       <Stack direction="row" spacing={2} justifyContent="center">
         <Button

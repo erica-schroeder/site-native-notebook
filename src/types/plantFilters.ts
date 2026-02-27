@@ -9,4 +9,5 @@ export type PlantFilters = {
   sunLevels?: SunLevel[];
   soilMoistures?: SoilMoisture[];
   traits?: Trait[];
+  caterpillars?: string[];
 };

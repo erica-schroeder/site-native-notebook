@@ -7,6 +7,7 @@ import { PlantNameSearch } from '../filter/PlantNameSearch';
 import { SoilMoistureSelect } from '../filter/SoilMoistureSelect';
 import { SunLevelSelect } from '../filter/SunLevelSelect';
 import { TraitSelect } from '../filter/TraitSelect';
+import { HostPlantSelect } from '../filter/HostPlantSelect';
 
 const Label = (props) =>
   <FormLabel
@@ -40,6 +41,8 @@ export const PlantSearchMd: React.FC = () => {
           <SoilMoistureSelect size="md" />
           <TraitSelect size="md" />
       </Stack>
+
+      <HostPlantSelect size="md" />
 
       <Stack direction="row" justifyContent="center" sx={{ pt: 2 }}>
         <Button

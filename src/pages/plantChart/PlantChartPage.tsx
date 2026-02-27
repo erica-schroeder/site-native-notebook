@@ -4,13 +4,22 @@ import { ZoomControls } from "@/components/ZoomControls";
 import { PlantFilterProvider, usePlantFilter } from "@/contexts/PlantFilterContext";
 import { ZoomProvider } from "@/contexts/ZoomContext";
 import { plantsWithAverages } from "@/data/plants";
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Divider, Stack, Typography } from "@mui/material";
 
 const PlantChartPageContent = () => {
     const { areFiltersEmpty, filteredPlants } = usePlantFilter();
 
     return (
         <Stack sx={{ px: 4, mt: 2 }}>
+
+            <Stack direction="row" alignItems="center" justifyContent="center">
+                <Typography variant="h5" component="h1">
+                    Find Plants
+                </Typography>
+            </Stack>
+
+            <Divider sx={{ my: 2 }} />
+
             <ZoomProvider>
                 <Stack alignItems="center">
                     <PlantSearch allPlants={plantsWithAverages} />

@@ -1,4 +1,5 @@
 import { Box, Button, Dialog, DialogActions, DialogContent, Link, Stack, Typography } from "@mui/material";
+import YardIcon from '@mui/icons-material/Yard';
 
 export const PlantDetailView = ({ plant, open, ...props }) => {
     const googleSearchUrl = `https://www.google.com/search?tbm=isch&q=${encodeURIComponent(
@@ -25,22 +26,41 @@ export const PlantDetailView = ({ plant, open, ...props }) => {
             {...props} >
             <DialogContent>
                 <Stack direction="row" spacing={4}>
+                        {plant?.illustration?.svg
+                            ?
                     <Box
                         sx={{
                             pt: 1,
                             px: 1,
-                            //width: 300,
-                            height: 300,
+                            height: {xs: 200, md: 300},
                             border: "4px solid #6d4c41",
                             borderRadius: 10,
                             boxShadow: "inset 0 0 0 2px #a1887f",
+                            display: "inline-flex",
+                            alignItems: "flex-end",
                         }}
                     >
-                        <img
-                            src={`${import.meta.env.BASE_URL}${plant?.illustration?.svg}`}
-                            style={{ width: "100%", height: "100%", objectFit: "contain" }}
-                        />
+                            <img
+                                src={`${import.meta.env.BASE_URL}${plant?.illustration?.svg}`}
+                                style={{ width: "100%", height: "100%", objectFit: "contain" }}
+                            />
                     </Box>
+                        :
+                        <Stack justifyContent="center" alignItems="center"
+                            sx={{
+                                pt: 1,
+                                px: 1,
+                                height: { xs: 200, md: 300 },
+                                border: "4px solid #6d4c41",
+                                borderRadius: 10,
+                                boxShadow: "inset 0 0 0 2px #a1887f",
+
+                            }}
+                        >
+                            <YardIcon />
+                            <Typography>No illustration yet!</Typography>
+                        </Stack>
+                    }
 
                     <Stack alignItems="center" spacing={1}>
                         <Stack alignItems="center">

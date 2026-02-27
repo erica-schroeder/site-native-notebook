@@ -15,7 +15,6 @@ const sizeConfig = {
 };
 
 export function ToggleButtonFilter({ options, size, ...props }) {
-    console.log("size is ", size)
     const config = sizeConfig[size ?? "lg"];
     return (
         <ToggleButtonGroup

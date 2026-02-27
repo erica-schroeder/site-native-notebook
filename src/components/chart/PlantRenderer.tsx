@@ -66,7 +66,7 @@ export const PlantRenderer = ({ plants, spacingFt=.5 }) => {
                 height={heightPx}
                 fill="green"
                 stroke="black"
-                onClick={() => window.alert("hi")}
+                onClick={() => setActivePlant(p)}
               />
             )}
             <line
