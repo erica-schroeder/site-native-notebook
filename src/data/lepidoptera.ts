@@ -6,4 +6,10 @@ export const lepidoptera: Lepidoptera[] = [{
     commonName: "Monarch",
     family: "Nymphalidae",
     icon: 'icons/lepidoptera-monarch-icon.svg'
+},{
+    id: "plebejus-samuelis",
+    scientificName: "Plebejus samuelis",
+    commonName: "Karner Blue",
+    family: "Lycaenidae",
+    icon: 'icons/lepidoptera-karnerblue-icon.svg'
 }];

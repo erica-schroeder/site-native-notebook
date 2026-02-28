@@ -14,7 +14,7 @@ const PlantChartPageContent = () => {
 
             <Stack direction="row" alignItems="center" justifyContent="center">
                 <Typography variant="h5" component="h1">
-                    Find Plants
+                    Find Michigan Native Plants
                 </Typography>
             </Stack>
 

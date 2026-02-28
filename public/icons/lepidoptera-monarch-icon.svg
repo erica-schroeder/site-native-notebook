@@ -2,20 +2,22 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="7.3229704mm"
-   height="3.8559098mm"
-   viewBox="0 0 7.3229704 3.8559098"
+   width="100"
+   height="100"
+   viewBox="0 0 26.458333 26.458333"
    version="1.1"
    id="svg1"
    xml:space="preserve"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"><defs
      id="defs1" /><g
-     id="layer2"
-     transform="translate(-82.740569,-108.4936)"><g
+     id="layer2"><g
        id="g12-3"
        style="display:inline"
-       transform="matrix(0.06979541,0,0,0.06979541,88.153708,99.834019)"><g
+       transform="matrix(0.252175,0,0,0.252175,19.557987,-25.199721)"><g
          id="g39-9"
          transform="translate(0.1988703)"><path
            style="display:inline;fill:#cc6627;fill-opacity:1;stroke:none;stroke-width:1.15041;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2;stroke-dasharray:none;stroke-opacity:1"
@@ -220,7 +222,7 @@
            style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.73249;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2;stroke-dasharray:none;stroke-opacity:1"
            id="path70-3"
            cx="-25.235962"
-           cy="136.54913"
+           cy="137.9411"
            rx="2.5619996"
            ry="2.4879715" /><circle
            style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.73249;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2;stroke-dasharray:none;stroke-opacity:1"
@@ -232,7 +234,7 @@
            d="m -24.843981,144.81131 c 3.03514,-2.59098 3.07493,27.53839 -0.22209,27.53839 -3.29702,0 -4.29362,-32.64632 0.22209,-27.53839 z"
            id="path72-8" /></g><g
          id="g95-9"
-         transform="translate(0.29611168,0.51819544)"><path
+         transform="translate(0.29611168,1.9102875)"><path
            style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.17687;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2;stroke-dasharray:none;stroke-opacity:1"
            d="m -25.72913,134.86884 -8.107775,-10.23631"
            id="path92-6" /><circle
@@ -242,7 +244,7 @@
            cy="124.44093"
            r="0.88833499" /></g><g
          id="g94-3"
-         transform="translate(0.29611168,0.51819544)"><path
+         transform="translate(0.29611168,1.9102875)"><path
            style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.17687;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2;stroke-dasharray:none;stroke-opacity:1"
            d="m -24.700118,134.86884 8.107775,-10.23631"
            id="path94-3" /><circle
@@ -251,4 +253,6 @@
            cx="16.376408"
            cy="124.44094"
            r="0.88833499"
-           transform="scale(-1,1)" /></g></g></g></svg>
+           transform="scale(-1,1)" /></g></g></g><metadata
+     id="metadata1"><rdf:RDF><cc:Work
+         rdf:about=""><dc:creator><cc:Agent><dc:title>Erica Schroeder</dc:title></cc:Agent></dc:creator><dc:rights><cc:Agent><dc:title>© 2026 Erica Schroeder. All rights reserved.</dc:title></cc:Agent></dc:rights></cc:Work></rdf:RDF></metadata></svg>

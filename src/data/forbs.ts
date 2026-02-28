@@ -11,7 +11,7 @@ export const forbs: Plant[] = [{
         widthFt: {min: 1, max: 3},
         flowerColor: ["orange"],
         hostCaterpillars: [
-          "danaus-plexippus"
+          "danaus-plexippus",
         ],
         illustration: {
              svg: "asclepias-tuberosa.svg",
@@ -29,7 +29,7 @@ export const forbs: Plant[] = [{
         widthFt: {min: 1.5, max: 3},
         flowerColor: ["pink"],
         hostCaterpillars: [
-          "danaus-plexippus"
+          "danaus-plexippus",
         ],
         illustration: {
              svg: "asclepias-incarnata.svg",
@@ -47,7 +47,7 @@ export const forbs: Plant[] = [{
         widthFt: {min: 2, max: 2},
         flowerColor: ["white"],
         hostCaterpillars: [
-          "danaus-plexippus"
+          "danaus-plexippus",
         ],
 },{
         id: "monarda-punctata",
@@ -235,4 +235,17 @@ export const forbs: Plant[] = [{
              heightFt: 4,
              widthFt: 1.5,
         },
+},{
+        id: "lupinus-perennis",
+        scientificName: "Lupinus perennis",
+        commonName: "Wild Lupine",
+        plantType: "forb",
+        sun: ["full", "part"],
+        soilMoisture: ["dry"],
+        heightFt: {min: 1, max: 2},
+        widthFt: {min: 1, max: 1},
+        flowerColor: ["blue"],
+        hostCaterpillars: [
+          "plebejus-samuelis",
+        ],
 }];

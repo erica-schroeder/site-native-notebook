@@ -31,6 +31,7 @@ export const HostPlantSelect = ({ size, fontSize }) => {
             </FilterLabel>
             <Autocomplete
                 multiple
+                disableCloseOnSelect
                 options={lepidoptera}
                 value={valueObjects}
                 onChange={(_, newValue) => {
@@ -46,7 +47,7 @@ export const HostPlantSelect = ({ size, fontSize }) => {
                 renderInput={(params) => (
                     <TextField
                         {...params}
-                        placeholder="Select lepidoptera species"
+                        placeholder="Select species"
                         size="small"
                         sx={{
                             "& .MuiInputBase-input::placeholder": {

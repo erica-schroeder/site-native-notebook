@@ -1,6 +1,7 @@
 import { ChartsSurface, useXScale, useYScale } from '@mui/x-charts';
 import { PlantLabel } from './PlantLabel';
 import { usePlantDetailDisplay } from '@/contexts/PlantDetailDisplayContext';
+import { HostPlantIndicator } from './HostPlantIndicator';
 
 export const PlantRenderer = ({ plants, spacingFt=.5 }) => {
   const { setActivePlant } = usePlantDetailDisplay();
@@ -41,6 +42,7 @@ export const PlantRenderer = ({ plants, spacingFt=.5 }) => {
           cumulativeFeet += spacingFt;
         }
 
+        const hostPlantIndicatorSize = 48;
 
         // return SVG image or rectangle placeholder
         return (
@@ -92,6 +94,7 @@ export const PlantRenderer = ({ plants, spacingFt=.5 }) => {
             />
 
             <PlantLabel plant={p} x={labelXPx} y={baselineY + labelYOffset} />
+            <HostPlantIndicator plant={p} size={hostPlantIndicatorSize} x={xPx} y={topY - hostPlantIndicatorSize} />
           </g>
         );
       })}
