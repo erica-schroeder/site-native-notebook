@@ -25,13 +25,12 @@ export const HostPlantSelect = ({ size, fontSize }) => {
     });
 
     return (
-        <FormControl>
+        <FormControl sx={{ flex: 1 }}>
             <FilterLabel size={size}>
                 Caterpillar Host
             </FilterLabel>
             <Autocomplete
                 multiple
-                disableCloseOnSelect
                 options={lepidoptera}
                 value={valueObjects}
                 onChange={(_, newValue) => {

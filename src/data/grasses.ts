@@ -9,6 +9,7 @@ export const grasses: Plant[] = [{
         soilMoisture: ["dry", "med"],
         heightFt: {min: 3, max: 3},
         widthFt: {min: 2, max: 3},
+        bloomMonths: ["jul", "aug", "sep", "oct"],
         illustration: {
              svg: "schizachyrium-scoparium.svg",
              heightFt: 3,

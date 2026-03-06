@@ -2,6 +2,8 @@ export type SoilMoisture = "dry" | "med" | "wet";
 export type SunLevel = "full" | "part" | "shade";
 export type PlantType = "forb" | "grass" | "sedge" | "shrub" | "tree";
 export type Color = "red" | "orange" | "yellow" | "green" | "blue" | "purple" | "pink" | "white";
+export const BLOOM_MONTHS = ["apr", "may", "jun", "jul", "aug", "sep", "oct", "nov"] as const;
+export type BloomMonth = typeof BLOOM_MONTHS[number];
 
 export type Traits = {
     keystone?: boolean;
@@ -30,4 +32,7 @@ export type Plant = {
     };
     traits?: Traits;
     hostCaterpillars?: string[];
+    notes?: string;
+    otherNames?: string[];
+    bloomMonths: BloomMonth[];
 };

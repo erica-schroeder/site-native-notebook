@@ -4,7 +4,7 @@ import {
     Tooltip
 } from '@mui/material';
 
-const sizeConfig = {
+export const sizeConfig = {
     xs: {
         toggleButtonSize: "small",
     },

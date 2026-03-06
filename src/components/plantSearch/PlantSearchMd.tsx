@@ -1,13 +1,14 @@
 import { usePlantFilter } from '@/contexts/PlantFilterContext';
-import { Button, FormControl, FormLabel, Stack } from '@mui/material';
+import { Button, FormLabel, Stack } from '@mui/material';
 import React from 'react';
+import { BloomMonthSelect } from '../filter/BloomMonthSelect';
 import { FlowerColorSelect } from '../filter/FlowerColorSelect';
 import { HeightRangeSlider } from '../filter/HeightRangeSlider';
+import { HostPlantSelect } from '../filter/HostPlantSelect';
 import { PlantNameSearch } from '../filter/PlantNameSearch';
 import { SoilMoistureSelect } from '../filter/SoilMoistureSelect';
 import { SunLevelSelect } from '../filter/SunLevelSelect';
 import { TraitSelect } from '../filter/TraitSelect';
-import { HostPlantSelect } from '../filter/HostPlantSelect';
 
 const Label = (props) =>
   <FormLabel
@@ -20,29 +21,21 @@ export const PlantSearchMd: React.FC = () => {
 
   return (
     <Stack spacing={2} alignItems={"stretch"} sx={{ maxWidth: 800 }}>
-      <FormControl>
-        <Label>
-          Common or Scientific Name
-        </Label>
-        <PlantNameSearch />
-      </FormControl>
+      <Stack direction="row" justifyContent="space-between">
+        <SunLevelSelect size="md" />
+        <SoilMoistureSelect size="md" />
+        <TraitSelect size="md" />
+      </Stack>
 
-      <FormControl sx={{ minWidth: 200, pr: 1 }}>
-        <Label>
-          Height range (feet)
-        </Label>
-        <HeightRangeSlider />
-      </FormControl>
+      <HeightRangeSlider size="md" />
 
       <FlowerColorSelect size="md" />
 
-      <Stack direction="row" justifyContent="space-between">
-          <SunLevelSelect size="md" />
-          <SoilMoistureSelect size="md" />
-          <TraitSelect size="md" />
-      </Stack>
+      <BloomMonthSelect size="md" />
 
       <HostPlantSelect size="md" />
+
+      <PlantNameSearch size="md" />
 
       <Stack direction="row" justifyContent="center" sx={{ pt: 2 }}>
         <Button

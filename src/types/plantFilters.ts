@@ -1,4 +1,4 @@
-import type { Color, SoilMoisture, SunLevel } from "./plant";
+import type { BloomMonth, Color, SoilMoisture, SunLevel } from "./plant";
 
 export type Trait = "keystone";
 
@@ -10,4 +10,5 @@ export type PlantFilters = {
   soilMoistures?: SoilMoisture[];
   traits?: Trait[];
   caterpillars?: string[];
+  bloomMonths?: BloomMonth[];
 };

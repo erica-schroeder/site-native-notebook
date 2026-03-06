@@ -13,12 +13,12 @@ const sizeConfig = {
     }
 };
 
-export const FilterLabel = ({ size, showInfoIcon, onInfoIconClicked, ...props }) => {
+export const FilterLabel = ({ size, showInfoIcon, onInfoIconClicked, sx, ...props }) => {
     const config = sizeConfig[size ?? "lg"];
 
     return (
         <Stack direction="row" spacing={.5} alignItems="center">
-            <FormLabel sx={{ fontSize: config?.fontSize }} {...props} />
+            <FormLabel sx={{ fontSize: config?.fontSize, ...sx }} {...props} />
             {showInfoIcon &&
                 <InfoIcon
                     onClick={onInfoIconClicked}

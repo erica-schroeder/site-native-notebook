@@ -1,4 +1,4 @@
-import { PlantDetailView } from "@/components/chart/PlantDetailView";
+import { PlantDetailView } from "@/components/chart/detailView/PlantDetailView";
 import type { Plant } from "@/types/plant";
 import { createContext, type ReactNode, useContext, useState } from "react";
 

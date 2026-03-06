@@ -4,10 +4,17 @@ import { ZoomControls } from "@/components/ZoomControls";
 import { PlantFilterProvider, usePlantFilter } from "@/contexts/PlantFilterContext";
 import { ZoomProvider } from "@/contexts/ZoomContext";
 import { plantsWithAverages } from "@/data/plants";
-import { Box, Divider, Stack, Typography } from "@mui/material";
+import { Alert, Box, Divider, Slide, Snackbar, Stack, Typography } from "@mui/material";
+import { useEffect, useState } from "react";
 
 const PlantChartPageContent = () => {
+    const [ showHint, setShowHint ] = useState(false);
     const { areFiltersEmpty, filteredPlants } = usePlantFilter();
+
+    useEffect(() => {
+        const timer = setTimeout(() => setShowHint(true), 500);
+        return () => clearTimeout(timer);
+    }, []);
 
     return (
         <Stack sx={{ px: 4, mt: 2 }}>
@@ -69,6 +76,23 @@ const PlantChartPageContent = () => {
                 </Box>
                 */}
             </ZoomProvider>
+
+            <Snackbar
+                anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+                open={showHint}
+                slots={{ transition: Slide }}
+                autoHideDuration={4000}
+                onClose={() => setShowHint(false)}
+            >
+                <Alert
+                    icon={false}
+                    onClose={() => setShowHint(false)}
+                    severity="success"
+                    variant="filled"
+                >
+                    Click any plant to view details!
+                </Alert>
+            </Snackbar>
         </Stack>
     );
 };

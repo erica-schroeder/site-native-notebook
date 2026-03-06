@@ -10,6 +10,7 @@ export const forbs: Plant[] = [{
         heightFt: {min: 2, max: 2},
         widthFt: {min: 1, max: 3},
         flowerColor: ["orange"],
+        bloomMonths: ["jun", "jul", "aug"],
         hostCaterpillars: [
           "danaus-plexippus",
         ],
@@ -22,15 +23,18 @@ export const forbs: Plant[] = [{
         id: "asclepias-incarnata",
         scientificName: "Asclepias incarnata",
         commonName: "Rose Milkweed",
+        otherNames: ["Swamp Milkweed"],
         plantType: "forb",
         sun: ["full"],
         soilMoisture: ["wet", "med"],
         heightFt: {min: 4, max: 4},
         widthFt: {min: 1.5, max: 3},
         flowerColor: ["pink"],
+        bloomMonths: ["jun", "jul", "aug"],
         hostCaterpillars: [
           "danaus-plexippus",
         ],
+        notes: "I find more monarch caterpillars on this milkweed than any others in my yard!",
         illustration: {
              svg: "asclepias-incarnata.svg",
              heightFt: 4,
@@ -46,6 +50,7 @@ export const forbs: Plant[] = [{
         heightFt: {min: 3, max: 5},
         widthFt: {min: 2, max: 2},
         flowerColor: ["white"],
+        bloomMonths: ["jun", "jul"],
         hostCaterpillars: [
           "danaus-plexippus",
         ],
@@ -59,6 +64,7 @@ export const forbs: Plant[] = [{
         heightFt: {min: 2, max: 2.5},
         widthFt: {min: 1, max: 2},
         flowerColor: ["pink", "white"],
+        bloomMonths: ["jul", "aug", "sep"],
         illustration: {
              svg: "monarda-punctata.svg",
              heightFt: 2.25,
@@ -74,6 +80,7 @@ export const forbs: Plant[] = [{
         heightFt: {min: 2, max: 2.5},
         widthFt: {min: 1.5, max: 2},
         flowerColor: ["purple"],
+        bloomMonths: ["jul", "aug", "sep"],
         illustration: {
              svg: "dalea-purpurea.svg",
              heightFt: 2.25,
@@ -88,6 +95,8 @@ export const forbs: Plant[] = [{
         soilMoisture: ["dry", "med"],
         heightFt: {min: 2, max: 2},
         widthFt: {min: 1, max: 1.5},
+        flowerColor: ["white"],
+        bloomMonths: ["jun", "jul", "aug", "sep"],
 },{
         id: "silphium-perfoliatum",
         scientificName: "Silphium perfoliatum",
@@ -98,6 +107,7 @@ export const forbs: Plant[] = [{
         heightFt: {min: 6, max: 9},
         widthFt: {min: 3, max: 5},
         flowerColor: ["yellow"],
+        bloomMonths: ["jul", "aug", "sep"],
         illustration: {
              svg: "silphium-perfoliatum.svg",
              heightFt: 7.5,
@@ -113,6 +123,7 @@ export const forbs: Plant[] = [{
         heightFt: {min: .5, max: .5},
         widthFt: {min: .25, max: .83},
         flowerColor: ["white"],
+        bloomMonths: ["apr", "may", "jun"],
         traits: {
              keystone: true,
         },
@@ -131,6 +142,7 @@ export const forbs: Plant[] = [{
         heightFt: {min: 4, max: 4},
         widthFt: {min: 1.5, max: 2},
         flowerColor: ["purple"],
+        bloomMonths: ["jul", "aug", "sep"],
         illustration: {
              svg: "echinacea-purpurea.svg",
              heightFt: 4,
@@ -146,6 +158,7 @@ export const forbs: Plant[] = [{
         heightFt: {min: 4, max: 6},
         widthFt: {min: 2, max: 2},
         flowerColor: ["pink", "purple"],
+        bloomMonths: ["jul", "aug", "sep"],
         illustration: {
              svg: "liatris-spicata.svg",
              heightFt: 5,
@@ -161,6 +174,7 @@ export const forbs: Plant[] = [{
         heightFt: {min: 3, max: 6},
         widthFt: {min: 1, max: 3},
         flowerColor: ["yellow"],
+        bloomMonths: ["sep", "oct", "nov"],
         traits: {
              keystone: true,
         },
@@ -179,6 +193,7 @@ export const forbs: Plant[] = [{
         heightFt: {min: .5, max: .75},
         widthFt: {min: .5, max: .75},
         flowerColor: ["pink"],
+        bloomMonths: ["apr", "may", "jun"],
         illustration: {
              svg: "geum-triflorum.svg",
              heightFt: .58,
@@ -194,6 +209,7 @@ export const forbs: Plant[] = [{
         heightFt: {min: 1, max: 2},
         widthFt: {min: 1, max: 1},
         flowerColor: ["purple"],
+        bloomMonths: ["may", "jun"],
         illustration: {
              svg: "penstemon-hirsutus.svg",
              heightFt: 1.5,
@@ -209,6 +225,7 @@ export const forbs: Plant[] = [{
         heightFt: {min: 1, max: 3},
         widthFt: {min: 1, max: 1},
         flowerColor: ["red"],
+        bloomMonths: ["apr", "may", "jun"],
         traits: {
              keystone: true,
         },
@@ -220,16 +237,19 @@ export const forbs: Plant[] = [{
 },{
         id: "helenium-autumnale",
         scientificName: "Helenium autumnale",
-        commonName: "Sneezeweed",
+        commonName: "Helen's Flower",
+        otherNames: ["Sneezeweed"],
         plantType: "forb",
         sun: ["full", "part"],
         soilMoisture: ["wet", "med"],
         heightFt: {min: 3, max: 5},
         widthFt: {min: 1.5, max: 2},
         flowerColor: ["yellow"],
+        bloomMonths: ["aug", "sep", "oct"],
         traits: {
              keystone: true,
         },
+        notes: "They really did this plant dirty naming it sneezeweed! Don't be fooled; it won't cause sneezing unless you dry and grind the leaves and snort them.",
         illustration: {
              svg: "helenium-autumnale.svg",
              heightFt: 4,
@@ -245,7 +265,22 @@ export const forbs: Plant[] = [{
         heightFt: {min: 1, max: 2},
         widthFt: {min: 1, max: 1},
         flowerColor: ["blue"],
+        bloomMonths: ["may", "jun", "jul"],
         hostCaterpillars: [
           "plebejus-samuelis",
+        ],
+},{
+        id: "zizia-aurea",
+        scientificName: "Zizia aurea",
+        commonName: "Golden Alexander",
+        plantType: "forb",
+        sun: ["full", "part"],
+        soilMoisture: ["med"],
+        heightFt: {min: 1, max: 3},
+        widthFt: {min: 1, max: 1},
+        flowerColor: ["yellow"],
+        bloomMonths: ["apr", "may", "jun"],
+        hostCaterpillars: [
+          "papilio-polyxenes",
         ],
 }];

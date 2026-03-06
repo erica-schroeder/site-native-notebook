@@ -1,5 +1,5 @@
 import { plantsWithAverages } from "@/data/plants";
-import type { Color, Plant, SoilMoisture, SunLevel } from "@/types/plant";
+import type { BloomMonth, Color, Plant, SoilMoisture, SunLevel } from "@/types/plant";
 import type { PlantFilters, Trait } from "@/types/plantFilters";
 import Fuse from "fuse.js";
 import { createContext, type ReactNode, useContext, useEffect, useMemo, useState } from "react";
@@ -15,6 +15,7 @@ const emptyFilters = {
     soilMoistures: [],
     traits: [],
     caterpillars: [],
+    bloomMonths: [],
 };
 
 export const PlantFilterProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
@@ -28,7 +29,7 @@ export const PlantFilterProvider: React.FC<{ children: ReactNode }> = ({ childre
   // Fuse initialized once per plant list
   const fuse = useMemo(() => {
     return new Fuse(plantsWithAverages, {
-      keys: ['commonName', 'scientificName'],
+      keys: ['commonName', 'scientificName', 'otherNames'],
       threshold: 0.3,
       ignoreLocation: true,
     });
@@ -48,6 +49,15 @@ export const PlantFilterProvider: React.FC<{ children: ReactNode }> = ({ childre
       result = result.filter(p =>
         p.flowerColor?.some(c =>
           filters.flowerColors.includes(c)
+        )
+      );
+    }
+
+    // Bloom month filter
+    if (filters.bloomMonths.length > 0) {
+      result = result.filter(p =>
+        p.bloomMonths?.some(m =>
+          filters.bloomMonths.includes(m)
         )
       );
     }
@@ -108,6 +118,7 @@ export const PlantFilterProvider: React.FC<{ children: ReactNode }> = ({ childre
     clearFilters,
     setSearchQuery: (searchQuery: string) => setFilters(f => ({ ...f, searchQuery })),
     setFlowerColors: (flowerColors: Color[]) => setFilters(f => ({ ...f, flowerColors })),
+    setBloomMonths: (bloomMonths: BloomMonth[]) => setFilters(f => ({ ...f, bloomMonths })),
     setSunLevels: (sunLevels: SunLevel[]) => setFilters(f => ({ ...f, sunLevels })),
     setSoilMoistures: (soilMoistures: SoilMoisture[]) => setFilters(f => ({ ...f, soilMoistures })),
     setHeightRange: (heightRange: [number, number]) => setFilters(f => ({ ...f, heightRange })),

@@ -12,4 +12,10 @@ export const lepidoptera: Lepidoptera[] = [{
     commonName: "Karner Blue",
     family: "Lycaenidae",
     icon: 'icons/lepidoptera-karnerblue-icon.svg'
+},{
+    id: "papilio-polyxenes",
+    scientificName: "Papilio polyxenes",
+    commonName: "Black Swallowtail",
+    family: "Papilionidae",
+    icon: 'icons/lepidoptera-blackswallowtail-icon.svg'
 }];

@@ -56,6 +56,7 @@ export const PlantRenderer = ({ plants, spacingFt=.5 }) => {
                 width={widthPx}
                 height={heightPx}
                 preserveAspectRatio="none"
+                style={{ cursor: 'pointer' }}
                 onClick={() => setActivePlant(p)}
                 //preserveAspectRatio="xMidYMax meet"
               />
@@ -68,6 +69,7 @@ export const PlantRenderer = ({ plants, spacingFt=.5 }) => {
                 height={heightPx}
                 fill="green"
                 stroke="black"
+                style={{ cursor: 'pointer' }}
                 onClick={() => setActivePlant(p)}
               />
             )}

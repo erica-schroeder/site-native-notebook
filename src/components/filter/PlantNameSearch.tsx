@@ -1,18 +1,25 @@
 import { usePlantFilter } from "@/contexts/PlantFilterContext";
-import { TextField } from "@mui/material";
+import { Box, FormControl, TextField } from "@mui/material";
+import { FilterLabel } from "./FilterLabel";
 
-export const PlantNameSearch = ({...props}) => {
+export const PlantNameSearch = ({size, ...props}) => {
     const { filters, setSearchQuery } = usePlantFilter();
 
     return (
-        <TextField
-            placeholder="contains..."
-            value={filters.searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            variant="outlined"
-            size="small"
-            sx={{ minWidth: "200" }}
-            {...props}
-        />
+        <FormControl sx={{ flex: 1 }}>
+            <FilterLabel size={size}>
+                Common or Scientific Name
+            </FilterLabel>
+            <TextField
+                placeholder="contains..."
+                value={filters.searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                variant="outlined"
+                size="small"
+                fullWidth
+                //sx={{ minWidth: "200" }}
+                {...props}
+            />
+        </FormControl>
     );
 };

@@ -9,6 +9,7 @@ export const sedges: Plant[] = [{
         soilMoisture: ["wet", "med"],
         heightFt: {min: 3, max: 3},
         widthFt: {min: 1, max: 2},
+        bloomMonths: ["may", "jun", "jul", "aug"],
         illustration: {
              svg: "carex-grayi.svg",
              heightFt: 3,
