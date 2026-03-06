@@ -15,4 +15,5 @@ export const sedges: Plant[] = [{
              heightFt: 3,
              widthFt: 1.5,
         },
+        notes: "The spiky balls on this plant are so cool and provide visual interest for months! (apparently the technical term for \"spiky balls\" here is perigynia)",
 }];
