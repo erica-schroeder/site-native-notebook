@@ -4,6 +4,7 @@ import { DetailViewHeader } from "./DetailViewHeader";
 import { FramedIllustration } from "./FramedIllustration";
 import { Notes } from './Notes';
 import { PlantCharacteristics } from './PlantCharacteristics';
+import { HostPlantInfo } from './HostPlantInfo';
 
 export const PlantDetailView = ({ plant, open, ...props }) => {
     const googleSearchUrl = `https://www.google.com/search?tbm=isch&q=${encodeURIComponent(
@@ -67,7 +68,7 @@ export const PlantDetailView = ({ plant, open, ...props }) => {
                     </Stack>
 
                     <Stack
-                        spacing={1}
+                        spacing={2}
                         alignItems={{ xs: "center", sm: "flex-start" }}
                         sx={{ width: "100%" }}
                     >

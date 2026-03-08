@@ -3,11 +3,11 @@ import { Stack, Typography } from "@mui/material";
 export const Notes = ({ plant }) => {
     return (
         <Stack
+            spacing={1}
             sx={{
                 width: "100%",
-                mt: 2,
                 px: 2,
-                pb: 2,
+                py: 1,
                 border: "1px solid",
                 borderColor: "divider",
                 borderRadius: 2,
@@ -15,7 +15,7 @@ export const Notes = ({ plant }) => {
             }}
         >
             <Typography
-                variant="overline"
+                variant="fieldLabel"
                 sx={{ color: "text.secondary" }}
             >
                 Erica's Notes

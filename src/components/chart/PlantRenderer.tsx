@@ -50,7 +50,7 @@ export const PlantRenderer = ({ plants, spacingFt=.5 }) => {
               {p.illustration?.svg ? (
               <image
                 key={p.id}
-                href={`${import.meta.env.BASE_URL}${p.illustration.svg}`}
+                href={`${import.meta.env.BASE_URL}illustrations/${p.illustration.svg}`}
                 x={xPx}
                 y={topY}
                 width={widthPx}

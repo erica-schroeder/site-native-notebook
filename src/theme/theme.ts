@@ -51,6 +51,12 @@ let theme = createTheme({
             fontSize: '1rem',
             fontWeight: 700,
         },
+        fieldLabel: {
+            fontSize: 12,
+            textTransform: 'uppercase',
+            letterSpacing: '0.08em',
+            color: 'text.secondary',
+        },
     },
     components: {
         MuiAppBar: {

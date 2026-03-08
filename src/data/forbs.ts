@@ -210,6 +210,7 @@ export const forbs: Plant[] = [{
         widthFt: {min: 1, max: 1},
         flowerColor: ["purple"],
         bloomMonths: ["may", "jun"],
+        notes: "I am so sorry to this plant for being dubbed hairy beardtongue. It's way too beautiful to deserve that name.",
         illustration: {
              svg: "penstemon-hirsutus.svg",
              heightFt: 1.5,
@@ -249,7 +250,7 @@ export const forbs: Plant[] = [{
         traits: {
              keystone: true,
         },
-        notes: "They really did this plant dirty naming it sneezeweed! Don't be fooled; it won't cause sneezing unless you dry and grind the leaves and snort them.",
+                notes: "They really did this plant dirty naming it sneezeweed! Don't be fooled; it won't cause sneezing unless you dry the leaves and snort them (...which is what people actually used to do with it).",
         illustration: {
              svg: "helenium-autumnale.svg",
              heightFt: 4,

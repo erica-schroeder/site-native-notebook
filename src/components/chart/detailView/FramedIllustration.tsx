@@ -30,7 +30,7 @@ export const FramedIllustration = ({ plant }) => {
             {plant?.illustration?.svg
                 ?
                 <img
-                    src={`${import.meta.env.BASE_URL}${plant?.illustration?.svg}`}
+                    src={`${import.meta.env.BASE_URL}illustrations/${plant?.illustration?.svg}`}
                     style={{ width: "100%", height: "100%", objectFit: "contain" }}
                 />
                 :

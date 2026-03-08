@@ -20,7 +20,7 @@ const emptyFilters = {
 
 export const PlantFilterProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [filteredPlants, setFilteredPlants] = useState<Plant[]>(plantsWithAverages);
-  const [filters, setFilters] = useState<PlantFilters>({...emptyFilters, searchQuery: 'asclepias'});
+  const [filters, setFilters] = useState<PlantFilters>(emptyFilters);
 
   useEffect(() => {
     applyFilters();

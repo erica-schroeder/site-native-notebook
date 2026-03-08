@@ -37,16 +37,17 @@ const PlantChartPageContent = () => {
                         No plants match your filters. Try adjusting bloom color, height, sun, or soil requirements.
                     </Typography>
                     :
+                    /*
                     areFiltersEmpty()
                         ?
                         <Typography sx={{ mt: 4, textAlign: 'center', color: 'gray' }}>
                             Use the filters above to see plants!
                         </Typography>
                         :
+                        */
                         <Box
                             sx={{
-                                ml: { xs: 0, md: 4 }, // remove left margin on small screens
-                                //minWidth: { xs: 900, md: "100%" },
+                                ml: { xs: 0, md: 4 },
                             }}
                         >
                             <PlantChartMui />

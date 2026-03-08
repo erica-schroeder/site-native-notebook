@@ -1,13 +1,7 @@
 import { Stack, Typography } from "@mui/material";
 import { SunSoilRequirements } from "./SunSoilRequirements";
-
-const Label = ({...props}) =>
-    <Typography
-        variant="overline"
-        fontSize={12}
-        sx={{ color: "text.secondary" }}
-        {...props}
-    />
+import { DetailField } from "./DetailField";
+import { HostPlantInfo } from "./HostPlantInfo";
 
 const formatFt = (ft: number) => {
     if (ft < 1) return `${Math.round(ft * 12)}"`;
@@ -16,20 +10,28 @@ const formatFt = (ft: number) => {
 
 export const PlantCharacteristics = ({ plant }) => {
     return (
+        <Stack spacing={1}>
+            <DetailField label="Conditions">
+                <SunSoilRequirements plant={plant} />
+            </DetailField>
 
-        <Stack spacing={0}>
-            {[
-                { label: "Conditions", value: <SunSoilRequirements plant={plant} /> },
-                { label: "Height", value: `${formatFt(plant.heightFt.min)} - ${formatFt(plant.heightFt.max)}` },
-                { label: "Spread", value: `${formatFt(plant.widthFt.min)} - ${formatFt(plant.widthFt.max)}` },
-            ].map(({ label, value }) => (
-                <Stack key={label} direction="row" spacing={2} alignItems="center">
-                    <Label sx={{ width: 100, flexShrink: 0 }}>
-                        {label}
-                    </Label>
-                    {typeof value === 'string' ? <Typography variant="body2">{value}</Typography> : value}
-                </Stack>
-            ))}
+            <DetailField label="Height">
+                <Typography>
+                    {formatFt(plant.heightFt.min)} - {formatFt(plant.heightFt.max)}
+                </Typography>
+            </DetailField>
+
+            <DetailField label="Spread">
+                <Typography>
+                {formatFt(plant.widthFt.min)} - {formatFt(plant.widthFt.max)}
+                </Typography>
+            </DetailField>
+
+            {plant.hostCaterpillars?.length > 0 &&
+                <DetailField label="Hosts">
+                    <HostPlantInfo plant={plant} />
+                </DetailField>
+            }
         </Stack>
     );
 }
