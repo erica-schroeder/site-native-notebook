@@ -55,7 +55,7 @@ export const HomePage = () => {
           size="large"
           onClick={() => navigate("/plant-chart")}
         >
-          Explore the Chart →
+          Explore the Chart!
         </Button>
       </Stack>
     </Box>

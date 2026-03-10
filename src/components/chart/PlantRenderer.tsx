@@ -2,6 +2,7 @@ import { ChartsSurface, useXScale, useYScale } from '@mui/x-charts';
 import { PlantLabel } from './PlantLabel';
 import { usePlantDetailDisplay } from '@/contexts/PlantDetailDisplayContext';
 import { HostPlantIndicator } from './HostPlantIndicator';
+import { PlantPlaceholder } from './PlantPlaceholder';
 
 export const PlantRenderer = ({ plants, spacingFt=.5 }) => {
   const { setActivePlant } = usePlantDetailDisplay();
@@ -61,17 +62,19 @@ export const PlantRenderer = ({ plants, spacingFt=.5 }) => {
                 //preserveAspectRatio="xMidYMax meet"
               />
             ) : (
-              <rect
-                key={p.id}
-                x={xPx}
-                y={topY}
-                width={widthPx}
-                height={heightPx}
-                fill="green"
-                stroke="black"
+              <g
                 style={{ cursor: 'pointer' }}
                 onClick={() => setActivePlant(p)}
-              />
+              >
+                <PlantPlaceholder
+                  key={p.id}
+                  x={xPx}
+                  y={topY}
+                  widthPx={widthPx}
+                  heightPx={heightPx}
+                  flowerColors={p.flowerColor ?? ['grey']}
+                />
+              </g>
             )}
             <line
               x1={xPx}

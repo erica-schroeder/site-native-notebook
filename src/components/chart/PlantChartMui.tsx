@@ -1,6 +1,5 @@
 import { PlantRenderer } from '@/components/chart/PlantRenderer';
 import { PlantDetailDisplayProvider } from '@/contexts/PlantDetailDisplayContext';
-import { usePlantFilter } from '@/contexts/PlantFilterContext';
 import { useZoom } from '@/contexts/ZoomContext';
 import { useContainerWidth } from '@/hooks/useContainerWidth';
 import type { Plant } from '@/types/plant';
@@ -14,8 +13,8 @@ import {
 import { sortBy } from 'lodash-es';
 import { useMemo } from 'react';
 
-const MARGIN = { left: 0, right: 70, top: 20, bottom: 150 };
-const SPACING_FT = .5;
+const MARGIN = { left: 0, right: 30, top: 20, bottom: 150 };
+const SPACING_FT = 1;
 
 function splitPlantsIntoRows(plants: Plant[], maxFeetPerRow: number) {
     const rows: Plant[][] = [];
@@ -45,8 +44,7 @@ function splitPlantsIntoRows(plants: Plant[], maxFeetPerRow: number) {
     return rows;
 }
 
-export const PlantChartMui = () => {
-    const { filteredPlants } = usePlantFilter();
+export const PlantChartMui = ({ plants }) => {
     const { ref: containerRef, width: containerWidth } = useContainerWidth<HTMLDivElement>();
     const {zoomFactor} = useZoom();
     const usableWidth = containerWidth - MARGIN.left - MARGIN.right;
@@ -67,7 +65,7 @@ export const PlantChartMui = () => {
     const effectivePxPerFoot = basePxPerFoot * zoomFactor;
     const maxFeetPerRow = Math.max(3, Math.floor(usableWidth / effectivePxPerFoot));
 
-    const plantRows = splitPlantsIntoRows(filteredPlants, maxFeetPerRow);
+    const plantRows = splitPlantsIntoRows(plants, maxFeetPerRow);
 
     const widestRowFeet = Math.max(
         ...plantRows.map(row =>
@@ -81,6 +79,7 @@ export const PlantChartMui = () => {
     return (
         <Stack
             ref={containerRef}
+            alignItems="center"
             onContextMenu={(e) => e.preventDefault()}
         >
             {plantRows.map((rowPlants, rowIndex) => {
