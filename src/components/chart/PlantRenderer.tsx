@@ -82,9 +82,9 @@ export const PlantRenderer = ({ plants, spacingFt=.5 }) => {
               y1={yScale(p.heightFt.max)}
               y2={yScale(p.heightFt.max)}
               stroke="currentColor"
-              strokeWidth={1}
+              strokeWidth={2}
               strokeDasharray="4 4"
-              opacity={0.6}
+              opacity={0.8}
             />
 
             <line
@@ -93,9 +93,9 @@ export const PlantRenderer = ({ plants, spacingFt=.5 }) => {
               y1={yScale(p.heightFt.min)}
               y2={yScale(p.heightFt.min)}
               stroke="currentColor"
-              strokeWidth={1}
+              strokeWidth={2}
               strokeDasharray="4 4"
-              opacity={0.6}
+              opacity={0.8}
             />
 
             <PlantLabel plant={p} x={labelXPx} y={baselineY + labelYOffset} />
