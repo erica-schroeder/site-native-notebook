@@ -1,10 +1,14 @@
 import type { Plant } from "@/types/plant";
-import { forbs } from "./forbs";
+import { forbs as forbsaf } from "./forbs-a-f";
+import { forbs as forbsgm } from "./forbs-g-m";
+import { forbs as forbsnz } from "./forbs-n-z";
 import { grasses } from "./grasses";
 import { sedges } from "./sedges";
 
 export const plants: Plant[] = [
-    ...forbs,
+    ...forbsaf,
+    ...forbsgm,
+    ...forbsnz,
     ...grasses,
     ...sedges,
 ];
