@@ -1,4 +1,4 @@
-import { PlantRenderer } from '@/components/chart/PlantRenderer';
+import { PlantRowRenderer } from '@/components/chart/PlantRowRenderer';
 import { PlantDetailDisplayProvider } from '@/contexts/PlantDetailDisplayContext';
 import { useZoom } from '@/contexts/ZoomContext';
 import { useContainerWidth } from '@/hooks/useContainerWidth';
@@ -15,6 +15,7 @@ import { useMemo } from 'react';
 
 const MARGIN = { left: 0, right: 30, top: 20, bottom: 150 };
 const SPACING_FT = 1;
+const PLANT_MIN_WIDTH_FT = 2;
 
 function splitPlantsIntoRows(plants: Plant[], maxFeetPerRow: number) {
     const rows: Plant[][] = [];
@@ -24,7 +25,7 @@ function splitPlantsIntoRows(plants: Plant[], maxFeetPerRow: number) {
     const sortedPlants = sortBy(plants, 'avgHeight').reverse();
 
     for (const plant of sortedPlants) {
-        const plantWidth = Math.max(plant.avgWidth, 1);
+        const plantWidth = Math.max(plant.avgWidth, PLANT_MIN_WIDTH_FT);
         const nextWidth =
             currentRow.length === 0
                 ? plantWidth
@@ -126,7 +127,9 @@ export const PlantChartMui = ({ plants }) => {
                         <ChartsGrid horizontal />
 
                         <PlantDetailDisplayProvider>
-                            <PlantRenderer plants={rowPlants} spacingFt={SPACING_FT} />
+                            <PlantRowRenderer plants={rowPlants} spacingFt={SPACING_FT} maxHeight={yFeetRange + 24}
+                            minWidthFt={PLANT_MIN_WIDTH_FT}
+                            />
                         </PlantDetailDisplayProvider>
                     </ChartContainer>
                 );

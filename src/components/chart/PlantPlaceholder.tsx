@@ -18,19 +18,6 @@ export const PlantPlaceholder = ({ x = 0, y = 0, heightPx, widthPx, flowerColors
                 strokeDasharray="1,3"
                 rx={3}
             />
-            {flowerColors?.map((color, i) => (
-                <circle
-                    key={color}
-                    cx={startX + i * (dotR * 2 + 2)}
-                    cy={dotY}
-                    r={dotR}
-                    fill={color}
-                    opacity={0.8}
-                    stroke="#7a9e7e"
-                    strokeWidth={1}
-                />
-            ))}
-            {/* text */}
             <text
                 x={widthPx / 2}
                 y={heightPx / 2}

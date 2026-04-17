@@ -1,108 +1,89 @@
-import { ChartsSurface, useXScale, useYScale } from '@mui/x-charts';
-import { PlantLabel } from './PlantLabel';
 import { usePlantDetailDisplay } from '@/contexts/PlantDetailDisplayContext';
+import { useXScale, useYScale } from '@mui/x-charts';
+import { BloomMonthIndicator } from './BloomMonthIndicator';
 import { HostPlantIndicator } from './HostPlantIndicator';
+import { PlantLabel } from './PlantLabel';
 import { PlantPlaceholder } from './PlantPlaceholder';
 
-export const PlantRenderer = ({ plants, spacingFt=.5 }) => {
-  const { setActivePlant } = usePlantDetailDisplay();
+const HOST_PLANT_INDICATOR_SIZE = 48;
+const LABEL_Y_OFFSET = 15;
+const BLOOM_OVERLAY_WIDTH_FT = 1.9;
 
+export const PlantRenderer = ({
+  plant,
+  plantXPx,
+  plantYPx,
+  widthPx,
+  heightPx,
+  slotCenterPx,
+  chartHeightPx
+}) => {
+  const { setActivePlant } = usePlantDetailDisplay();
   const xScale = useXScale('x');
   const yScale = useYScale('y');
 
-  if (!xScale || !yScale) return null;
+  const labelXPx = slotCenterPx;
+  const labelYPx = plantYPx + heightPx + LABEL_Y_OFFSET;
 
-  let cumulativeFeet = 0;
-  const baselineY = yScale(0);
-  const labelYOffset = 15; // px below x-axis
+  const bloomWidthPx = xScale(BLOOM_OVERLAY_WIDTH_FT) - xScale(0);
+  const bloomXPx = slotCenterPx - bloomWidthPx / 2;
+  const bloomYPx = chartHeightPx;
 
   return (
-    <ChartsSurface>
-      {plants.map((p, i) => {
-        const widthFeet = p.illustration?.widthFt ?? p.avgWidth ?? 1;
-        const heightFeet = p.illustration?.heightFt ?? p.avgHeight ?? 1;
+    <g key={plant.id}>
+      {plant.illustration?.svg ? (
+        <image
+          key={plant.id}
+          href={`${import.meta.env.BASE_URL}illustrations/${plant.illustration.svg}`}
+          x={plantXPx}
+          y={plantYPx}
+          width={widthPx}
+          height={heightPx}
+          preserveAspectRatio="none"
+          style={{ cursor: 'pointer' }}
+          onClick={() => setActivePlant(plant)}
+        //preserveAspectRatio="xMidYMax meet"
+        />
+      ) : (
+        <g
+          style={{ cursor: 'pointer' }}
+          onClick={() => setActivePlant(plant)}
+        >
+          <PlantPlaceholder
+            key={plant.id}
+            x={plantXPx}
+            y={plantYPx}
+            widthPx={widthPx}
+            heightPx={heightPx}
+            flowerColors={plant.flowerColor ?? ['grey']}
+          />
+        </g>
+      )}
+      <line
+        x1={plantXPx}
+        x2={plantXPx + widthPx}
+        y1={yScale(plant.heightFt.max)}
+        y2={yScale(plant.heightFt.max)}
+        stroke="currentColor"
+        strokeWidth={2}
+        strokeDasharray="4 4"
+        opacity={0.8}
+      />
 
-        const plantStartFeet = cumulativeFeet;
-        const plantCenterFeet = plantStartFeet + widthFeet / 2;
+      <line
+        x1={plantXPx}
+        x2={plantXPx + widthPx}
+        y1={yScale(plant.heightFt.min)}
+        y2={yScale(plant.heightFt.min)}
+        stroke="currentColor"
+        strokeWidth={2}
+        strokeDasharray="4 4"
+        opacity={0.8}
+      />
 
-        const xPx = xScale(cumulativeFeet);
-        const centerXPx = xScale(plantCenterFeet);
-        const labelXPx = centerXPx;
-
-        const widthPx =
-          xScale(cumulativeFeet + widthFeet) - xScale(cumulativeFeet);
-
-        const heightPx = yScale(0) - yScale(heightFeet);
-        const topY = baselineY - heightPx;
-
-        // Advance feet AFTER computing current plant
-        cumulativeFeet += Math.max(widthFeet, 1);
-
-        // Add spacing only BETWEEN plants
-        if (i < plants.length - 1) {
-          cumulativeFeet += spacingFt;
-        }
-
-        const hostPlantIndicatorSize = 48;
-
-        // return SVG image or rectangle placeholder
-        return (
-            <g key={p.id}>
-              {p.illustration?.svg ? (
-              <image
-                key={p.id}
-                href={`${import.meta.env.BASE_URL}illustrations/${p.illustration.svg}`}
-                x={xPx}
-                y={topY}
-                width={widthPx}
-                height={heightPx}
-                preserveAspectRatio="none"
-                style={{ cursor: 'pointer' }}
-                onClick={() => setActivePlant(p)}
-                //preserveAspectRatio="xMidYMax meet"
-              />
-            ) : (
-              <g
-                style={{ cursor: 'pointer' }}
-                onClick={() => setActivePlant(p)}
-              >
-                <PlantPlaceholder
-                  key={p.id}
-                  x={xPx}
-                  y={topY}
-                  widthPx={widthPx}
-                  heightPx={heightPx}
-                  flowerColors={p.flowerColor ?? ['grey']}
-                />
-              </g>
-            )}
-            <line
-              x1={xPx}
-              x2={xPx + widthPx}
-              y1={yScale(p.heightFt.max)}
-              y2={yScale(p.heightFt.max)}
-              stroke="currentColor"
-              strokeWidth={2}
-              strokeDasharray="4 4"
-              opacity={0.8}
-            />
-
-            <line
-              x1={xPx}
-              x2={xPx + widthPx}
-              y1={yScale(p.heightFt.min)}
-              y2={yScale(p.heightFt.min)}
-              stroke="currentColor"
-              strokeWidth={2}
-              strokeDasharray="4 4"
-              opacity={0.8}
-            />
-
-            <PlantLabel plant={p} x={labelXPx} y={baselineY + labelYOffset} />
-            <HostPlantIndicator plant={p} size={hostPlantIndicatorSize} x={xPx} y={topY - hostPlantIndicatorSize} />
-          </g>
-        );
-      })}
-    </ChartsSurface>
+      <PlantLabel plant={plant} x={labelXPx} y={labelYPx} />
+      <HostPlantIndicator plant={plant} size={HOST_PLANT_INDICATOR_SIZE} x={plantXPx} y={plantYPx - HOST_PLANT_INDICATOR_SIZE} />
+      <BloomMonthIndicator bloomMonths={plant.bloomMonths} flowerColors={plant.flowerColor} width={bloomWidthPx} x={bloomXPx} y={bloomYPx} />
+    </g>
   );
 }

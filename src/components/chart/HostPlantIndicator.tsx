@@ -21,7 +21,6 @@ export const HostPlantIndicator = ({
           href={c.icon}
           x={x + index * (size + spacing)}
           y={y}
-          width={size}
           height={size}
         />
       ))}
