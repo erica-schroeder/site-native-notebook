@@ -72,12 +72,17 @@ export const forbs: Plant[] = [{
         sun: ["full", "part"],
         soilMoisture: ["med"],
         heightFt: {min: 1, max: 3},
-        widthFt: {min: 1, max: 1},
+        widthFt: {min: 1.5, max: 1.5},
         flowerColor: ["yellow"],
         bloomMonths: ["apr", "may", "jun"],
         hostCaterpillars: [
           "papilio-polyxenes",
         ],
+        illustration: {
+             svg: "zizia-aurea.svg",
+             heightFt: 3,
+             widthFt: 1.5,
+        },
 },{
         id: "packera-aurea",
         scientificName: "Packera aurea",
@@ -287,7 +292,7 @@ export const forbs: Plant[] = [{
 },{
         id: "solidago-flexicaulis",
         scientificName: "Solidago flexicaulis",
-        commonName: "Zig Zag Goldenrod",
+        commonName: "Zigzag Goldenrod",
         plantType: "forb",
         sun: ["part", "shade"],
         soilMoisture: ["med"],
@@ -295,6 +300,11 @@ export const forbs: Plant[] = [{
         widthFt: {min: 1, max: 2},
         flowerColor: ["yellow"],
         bloomMonths: ["aug", "sep", "oct"],
+        illustration: {
+             svg: "solidago-flexicaulis.svg",
+             heightFt: 3,
+             widthFt: 1.5,
+        },
 },{
         id: "solidago-nemoralis",
         scientificName: "Solidago nemoralis",
@@ -321,6 +331,11 @@ export const forbs: Plant[] = [{
         widthFt: {min: 1.5, max: 1.5},
         flowerColor: ["yellow"],
         bloomMonths: ["jul", "aug", "sep"],
+        illustration: {
+             svg: "oligoneuron-ohioense.svg",
+             heightFt: 3,
+             widthFt: 1.5,
+        },
 },{
         id: "oligoneuron-riddellii",
         scientificName: "Oligoneuron riddellii",

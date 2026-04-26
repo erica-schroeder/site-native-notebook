@@ -2,15 +2,15 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="100"
+   width="56"
    height="100"
-   viewBox="0 0 26.458333 26.458333"
+   viewBox="0 0 14.816672 26.458333"
    version="1.1"
    id="svg1"
    inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
    sodipodi:docname="native-notebook-icons.svg"
    xml:space="preserve"
-   inkscape:export-filename="../public/icons/lepidoptera-baltimorecheckerspot-icon.svg"
+   inkscape:export-filename="../public/icons/lepidoptera-karnerblue-icon.svg"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -32,8 +32,8 @@
      inkscape:document-units="mm"
      showguides="true"
      inkscape:zoom="1.7870511"
-     inkscape:cx="263.28291"
-     inkscape:cy="233.06553"
+     inkscape:cx="108.55873"
+     inkscape:cy="128.98344"
      inkscape:window-width="2512"
      inkscape:window-height="1211"
      inkscape:window-x="46"
@@ -2595,7 +2595,7 @@
        id="g88-0"
        inkscape:label="karner-blue"
        style="display:inline"
-       transform="matrix(0.33468895,0.02595075,-0.02595075,0.33468895,134.2165,-48.044016)"
+       transform="matrix(0.33468895,0.02595075,-0.02595075,0.33468895,93.084353,-49.820686)"
        inkscape:export-filename="../public/icons/lepidoptera-karnerblue-icon.svg"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96"><g

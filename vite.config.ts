@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [react()],
   base: './',
   build: {
-    target: "es2015"
+    target: "es2015",
   },
   resolve: {
     alias: {

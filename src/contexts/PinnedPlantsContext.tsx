@@ -5,8 +5,6 @@ const PARAM_KEY = "pins";
 const PinnedPlantsContext = createContext(null);
 
 export const PinnedPlantsProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [pinnedIds, setPinnedIds] = useState(() => getPinnedFromUrl());
-
   const getPinnedFromUrl = () => {
     const hash = window.location.hash;
     const queryString = hash.includes("?") ? hash.slice(hash.indexOf("?")) : "";
@@ -14,6 +12,8 @@ export const PinnedPlantsProvider: React.FC<{ children: ReactNode }> = ({ childr
     const raw = params.get(PARAM_KEY);
     return raw ? raw.split(",").filter(Boolean) : [];
   }
+
+  const [pinnedIds, setPinnedIds] = useState(() => getPinnedFromUrl());
 
   const syncUrlWithPins = (ids) => {
     const hash = window.location.hash;
