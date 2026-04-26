@@ -8,6 +8,7 @@ import { Alert, Box, Divider, Pagination, Slide, Snackbar, Stack, Typography, us
 import { useEffect, useState } from "react";
 import { PinnedPlantsAccordion } from "./PinnedPlantsAccordion";
 import { PinnedPlantsProvider } from "@/contexts/PinnedPlantsContext";
+import { PinnedPlantShelf } from "./PinnedPlantShelf";
 
 const PAGE_SIZE = 20;
 
@@ -52,9 +53,7 @@ const PlantChartPageContent = () => {
                     <PlantSearch allPlants={plantsWithAverages} />
                 </Stack>
 
-                    <Box sx={{ pt: 4, px: 10 }}>
-                        <PinnedPlantsAccordion />
-                    </Box>
+                <PinnedPlantShelf />
 
                 {filteredPlants.length === 0
 
