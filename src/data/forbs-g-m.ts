@@ -1,7 +1,7 @@
 import type { Plant } from "@/types/plant";
 
 export const forbs: Plant[] = [{
-        id: "monarda-punctata",
+        id: "mopu",
         scientificName: "Monarda punctata",
         commonName: "Spotted Bee Balm",
         plantType: "forb",
@@ -18,7 +18,7 @@ export const forbs: Plant[] = [{
              widthFt: 1.5,
         },
 },{
-        id: "monarda-fistulosa",
+        id: "mofi",
         scientificName: "Monarda fistulosa",
         commonName: "Wild Bee Balm",
         otherNames: ["Wild Bergamot"],
@@ -35,7 +35,7 @@ export const forbs: Plant[] = [{
              widthFt: 2.75,
         },
 },{
-        id: "liatris-spicata",
+        id: "lisp",
         scientificName: "Liatris spicata",
         commonName: "Marsh Blazing Star",
         plantType: "forb",
@@ -51,7 +51,7 @@ export const forbs: Plant[] = [{
              widthFt: 2,
         },
 },{
-        id: "geum-triflorum",
+        id: "getr",
         scientificName: "Geum triflorum",
         commonName: "Prairie Smoke",
         plantType: "forb",
@@ -67,7 +67,7 @@ export const forbs: Plant[] = [{
              widthFt: .58,
         },
 },{
-        id: "helenium-autumnale",
+        id: "heau",
         scientificName: "Helenium autumnale",
         commonName: "Helen's Flower",
         otherNames: ["Sneezeweed"],
@@ -88,7 +88,7 @@ export const forbs: Plant[] = [{
              widthFt: 1.5,
         },
 },{
-        id: "lupinus-perennis",
+        id: "lupe3",
         scientificName: "Lupinus perennis",
         commonName: "Wild Lupine",
         plantType: "forb",
@@ -107,7 +107,7 @@ export const forbs: Plant[] = [{
              widthFt: 1.5,
         },
 },{
-        id: "gentiana-andrewsii",
+        id: "gean",
         scientificName: "Gentiana andrewsii",
         commonName: "Bottle Gentian",
         plantType: "forb",
@@ -118,7 +118,7 @@ export const forbs: Plant[] = [{
         flowerColor: ["blue"],
         bloomMonths: ["aug", "sep", "oct"],
 },{
-        id: "geranium-maculatum",
+        id: "gema",
         scientificName: "Geranium maculatum",
         commonName: "Wild Geranium",
         plantType: "forb",
@@ -134,7 +134,7 @@ export const forbs: Plant[] = [{
              widthFt: 1.5,
         },
 },{
-        id: "heliopsis-helianthoides",
+        id: "hehe5",
         scientificName: "Heliopsis helianthoides",
         commonName: "Early Sunflower",
         plantType: "forb",
@@ -145,7 +145,7 @@ export const forbs: Plant[] = [{
         flowerColor: ["yellow"],
         bloomMonths: ["jun", "jul", "aug", "sep"],
 },{
-        id: "heuchera-americana",
+        id: "heam6",
         scientificName: "Heuchera americana",
         otherNames: ["Coral Bells"],
         commonName: "Alumroot",
@@ -157,7 +157,7 @@ export const forbs: Plant[] = [{
         flowerColor: ["green", "white", "pink"],
         bloomMonths: ["jun", "jul", "aug"],
 },{
-        id: "hibiscus-moscheutos",
+        id: "himo",
         scientificName: "Hibiscus moscheutos",
         commonName: "Swamp Rose Mallow",
         plantType: "forb",
@@ -168,7 +168,7 @@ export const forbs: Plant[] = [{
         flowerColor: ["white", "pink"],
         bloomMonths: ["jul", "aug", "sep"],
 },{
-        id: "hydrophyllum-virginianum",
+        id: "hyvi",
         scientificName: "Hydrophyllum virginianum",
         commonName: "Virginia Waterleaf",
         plantType: "forb",
@@ -179,7 +179,7 @@ export const forbs: Plant[] = [{
         flowerColor: ["purple"],
         bloomMonths: ["may", "jun"],
 },{
-        id: "hypericum-ascyron",
+        id: "hyas80",
         scientificName: "Hypericum ascyron",
         commonName: "Great St. John's Wort",
         plantType: "forb",
@@ -190,7 +190,7 @@ export const forbs: Plant[] = [{
         flowerColor: ["yellow"],
         bloomMonths: ["jul", "aug"],
 },{
-        id: "iris-virginica",
+        id: "irvi",
         scientificName: "Iris virginica",
         commonName: "Southern Blue Flag Iris",
         plantType: "forb",
@@ -206,7 +206,7 @@ export const forbs: Plant[] = [{
              widthFt: 2,
         },
 },{
-        id: "lespedeza-capitata",
+        id: "leca8",
         scientificName: "Lespedeza capitata",
         commonName: "Round-headed Bush Clover",
         plantType: "forb",
@@ -217,7 +217,7 @@ export const forbs: Plant[] = [{
         flowerColor: ["green", "white"],
         bloomMonths: ["aug", "sep"],
 },{
-        id: "liatris-aspera",
+        id: "lias",
         scientificName: "Liatris aspera",
         commonName: "Rough Blazing Star",
         otherNames: ["Button Blazing Star"],
@@ -229,7 +229,7 @@ export const forbs: Plant[] = [{
         flowerColor: ["purple"],
         bloomMonths: ["jul", "aug", "sep", "oct"],
 },{
-        id: "liatris-scariosa",
+        id: "lisc2",
         scientificName: "Liatris scariosa",
         commonName: "Northern Blazing Star",
         plantType: "forb",
@@ -240,7 +240,7 @@ export const forbs: Plant[] = [{
         flowerColor: ["purple"],
         bloomMonths: ["aug", "sep"],
 },{
-        id: "lobelia-cardinalis",
+        id: "loca2",
         scientificName: "Lobelia cardinalis",
         commonName: "Cardinal Flower",
         plantType: "forb",
@@ -251,7 +251,7 @@ export const forbs: Plant[] = [{
         flowerColor: ["red"],
         bloomMonths: ["jul", "aug", "sep"],
 },{
-        id: "lobelia-siphilitica",
+        id: "losi",
         scientificName: "Lobelia siphilitica",
         commonName: "Great Blue Lobelia",
         plantType: "forb",

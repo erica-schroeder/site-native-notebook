@@ -1,7 +1,7 @@
 import type { Plant } from "@/types/plant";
 
 export const forbs: Plant[] = [{
-        id: "asclepias-tuberosa",
+        id: "astu",
         scientificName: "Asclepias tuberosa",
         commonName: "Butterfly Weed",
         plantType: "forb",
@@ -20,7 +20,7 @@ export const forbs: Plant[] = [{
              widthFt: 1.5,
         },
 },{
-        id: "asclepias-incarnata",
+        id: "asin",
         scientificName: "Asclepias incarnata",
         commonName: "Rose Milkweed",
         otherNames: ["Swamp Milkweed"],
@@ -41,7 +41,7 @@ export const forbs: Plant[] = [{
              widthFt: 2.25,
         },
 },{
-        id: "asclepias-exaltata",
+        id: "asex",
         scientificName: "Asclepias exaltata",
         commonName: "Poke Milkweed",
         plantType: "forb",
@@ -55,7 +55,7 @@ export const forbs: Plant[] = [{
           "danaus-plexippus",
         ],
 },{
-        id: "dalea-purpurea",
+        id: "dapu5",
         scientificName: "Dalea purpurea",
         commonName: "Purple Prairie Clover",
         plantType: "forb",
@@ -71,7 +71,7 @@ export const forbs: Plant[] = [{
              widthFt: 1.75,
         },
 },{
-        id: "fragaria-virginiana",
+        id: "frvi",
         scientificName: "Fragaria virginiana",
         commonName: "Wild Strawberry",
         plantType: "forb",
@@ -90,7 +90,7 @@ export const forbs: Plant[] = [{
              widthFt: .54,
         },
 },{
-        id: "echinacea-purpurea",
+        id: "ecpu",
         scientificName: "Echinacea purpurea",
         commonName: "Purple Coneflower",
         plantType: "forb",
@@ -106,7 +106,7 @@ export const forbs: Plant[] = [{
              widthFt: 1.75,
         },
 },{
-        id: "aquilegia-canadensis",
+        id: "aqca",
         scientificName: "Aquilegia canadensis",
         commonName: "Wild Columbine",
         plantType: "forb",
@@ -125,7 +125,7 @@ export const forbs: Plant[] = [{
              widthFt: 1,
         },
 },{
-        id: "anemone-virginiana",
+        id: "anvi3",
         scientificName: "Anemone virginiana",
         commonName: "Tall Thimbleweed",
         plantType: "forb",
@@ -136,7 +136,7 @@ export const forbs: Plant[] = [{
         flowerColor: ["white"],
         bloomMonths: ["jun", "jul", "aug"],
 },{
-        id: "aralia-racemosa",
+        id: "arra",
         scientificName: "Aralia racemosa",
         commonName: "Spikenard",
         plantType: "forb",
@@ -147,7 +147,7 @@ export const forbs: Plant[] = [{
         flowerColor: ["green"],
         bloomMonths: ["jul", "aug"],
 },{
-        id: "asarum-canadense",
+        id: "asca",
         scientificName: "Asarum canadense",
         commonName: "Wild Ginger",
         plantType: "forb",
@@ -162,8 +162,8 @@ export const forbs: Plant[] = [{
              heightFt: .5,
              widthFt: 1,
         },
-        }, {
-        id: "baptisia-australis",
+}, {
+        id: "baau",
         scientificName: "Baptisia australis",
         commonName: "Blue Wild Indigo",
         plantType: "forb",
@@ -173,8 +173,13 @@ export const forbs: Plant[] = [{
         widthFt: {min: 2, max: 3},
         flowerColor: ["blue"],
         bloomMonths: ["may", "jun", "jul"],
+        illustration: {
+             svg: "baptisia-australis.svg",
+             heightFt: 4,
+             widthFt: 3,
+        },
 },{
-        id: "baptisia-bracteata",
+        id: "babr2",
         scientificName: "Baptisia bracteata",
         commonName: "Cream Wild Indigo",
         plantType: "forb",
@@ -185,7 +190,7 @@ export const forbs: Plant[] = [{
         flowerColor: ["white"],
         bloomMonths: ["may", "jun"],
 },{
-        id: "campanula-rotundifolia",
+        id: "caro2",
         scientificName: "Campanula rotundifolia",
         commonName: "Harebell",
         plantType: "forb",
@@ -196,7 +201,7 @@ export const forbs: Plant[] = [{
         flowerColor: ["purple"],
         bloomMonths: ["jun", "jul", "aug", "sep"],
 },{
-        id: "caulophyllum-thalictroides",
+        id: "cath2",
         scientificName: "Caulophyllum thalictroides",
         commonName: "Blue Cohosh",
         plantType: "forb",
@@ -207,7 +212,7 @@ export const forbs: Plant[] = [{
         flowerColor: ["green"],
         bloomMonths: ["apr", "may"],
 },{
-        id: "chelone-glabra",
+        id: "chgl2",
         scientificName: "Chelone glabra",
         commonName: "Turtlehead",
         plantType: "forb",
@@ -226,7 +231,7 @@ export const forbs: Plant[] = [{
              widthFt: 1.5,
         },
 },{
-        id: "coreopsis-lanceolata",
+        id: "cola5",
         scientificName: "Coreopsis lanceolata",
         commonName: "Sand Coreopsis",
         otherNames: ["Lance-leaf Coreopsis"],
@@ -246,7 +251,7 @@ export const forbs: Plant[] = [{
              widthFt: 1,
         },
 },{
-        id: "coreopsis-tripteris",
+        id: "cotr4",
         scientificName: "Coreopsis tripteris",
         commonName: "Tall Coreopsis",
         plantType: "forb",
@@ -257,7 +262,7 @@ export const forbs: Plant[] = [{
         flowerColor: ["yellow"],
         bloomMonths: ["jul", "aug", "sep", "oct"],
 },{
-        id: "echinacea-pallida",
+        id: "ecpa",
         scientificName: "Echinacea pallida",
         commonName: "Pale Purple Coneflower",
         plantType: "forb",
@@ -268,7 +273,7 @@ export const forbs: Plant[] = [{
         flowerColor: ["pink"],
         bloomMonths: ["jun", "jul"],
 },{
-        id: "eryngium-yuccifolium",
+        id: "eryu",
         scientificName: "Eryngium yuccifolium",
         commonName: "Rattlesnake Master",
         plantType: "forb",
@@ -279,7 +284,7 @@ export const forbs: Plant[] = [{
         flowerColor: ["white"],
         bloomMonths: ["jul", "aug", "sep"],
 },{
-        id: "eupatorium-perfoliatum",
+        id: "eupe3",
         scientificName: "Eupatorium perfoliatum",
         commonName: "Boneset",
         plantType: "forb",
@@ -290,7 +295,7 @@ export const forbs: Plant[] = [{
         flowerColor: ["white"],
         bloomMonths: ["jul", "aug", "sep"],
 },{
-        id: "euphorbia-corollata",
+        id: "euco10",
         scientificName: "Euphorbia corollata",
         commonName: "Flowering Spurge",
         plantType: "forb",
@@ -301,7 +306,7 @@ export const forbs: Plant[] = [{
         flowerColor: ["white"],
         bloomMonths: ["jun", "jul", "aug"],
 },{
-        id: "eurybia-macrophylla",
+        id: "euma27",
         scientificName: "Eurybia macrophylla",
         commonName: "Big-leaved Aster",
         plantType: "forb",
@@ -312,7 +317,7 @@ export const forbs: Plant[] = [{
         flowerColor: ["white"],
         bloomMonths: ["aug", "sep", "oct"],
 },{
-        id: "eutrochium-maculatum",
+        id: "euma9",
         scientificName: "Eutrochium maculatum",
         commonName: "Joe Pye Weed",
         plantType: "forb",
@@ -331,7 +336,7 @@ export const forbs: Plant[] = [{
              widthFt: 3.5,
         },
 },{
-        id: "eutrochium-purpureum",
+        id: "eupu21",
         scientificName: "Eutrochium purpureum",
         commonName: "Sweet Joe Pye Weed",
         plantType: "forb",

@@ -1,7 +1,7 @@
 import type { Plant } from "@/types/plant";
 
 export const forbs: Plant[] = [{
-        id: "pycnanthemum-tenuifolium",
+        id: "pyte",
         scientificName: "Pycnanthemum tenuifolium",
         commonName: "Slender Mountain Mint",
         plantType: "forb",
@@ -12,7 +12,7 @@ export const forbs: Plant[] = [{
         flowerColor: ["white"],
         bloomMonths: ["jun", "jul", "aug", "sep"],
 },{
-        id: "silphium-perfoliatum",
+        id: "sipe2",
         scientificName: "Silphium perfoliatum",
         commonName: "Cup Plant",
         plantType: "forb",
@@ -28,7 +28,7 @@ export const forbs: Plant[] = [{
              widthFt: 4,
         },
 },{
-        id: "solidago-speciosa",
+        id: "sosp2",
         scientificName: "Solidago speciosa",
         commonName: "Showy Goldenrod",
         plantType: "forb",
@@ -47,7 +47,7 @@ export const forbs: Plant[] = [{
              widthFt: 2,
         },
 },{
-        id: "penstemon-hirsutus",
+        id: "pehi",
         scientificName: "Penstemon hirsutus",
         commonName: "Lavender Beardtongue",
         otherNames: ["Hairy Beardtongue"],
@@ -65,7 +65,7 @@ export const forbs: Plant[] = [{
              widthFt: 1,
         },
 },{
-        id: "zizia-aurea",
+        id: "ziau",
         scientificName: "Zizia aurea",
         commonName: "Golden Alexanders",
         plantType: "forb",
@@ -84,7 +84,7 @@ export const forbs: Plant[] = [{
              widthFt: 1.5,
         },
 },{
-        id: "packera-aurea",
+        id: "paau3",
         scientificName: "Packera aurea",
         commonName: "Golden Ragwort",
         plantType: "forb",
@@ -95,7 +95,7 @@ export const forbs: Plant[] = [{
         flowerColor: ["yellow"],
         bloomMonths: ["may", "jun"],
 },{
-        id: "penstemon-digitalis",
+        id: "pedi",
         scientificName: "Penstemon digitalis",
         commonName: "Foxglove Beardtongue",
         plantType: "forb",
@@ -106,7 +106,7 @@ export const forbs: Plant[] = [{
         flowerColor: ["white"],
         bloomMonths: ["jun", "jul"],
 },{
-        id: "phlox-divaricata",
+        id: "phdi5",
         scientificName: "Phlox divaricata",
         commonName: "Woodland Phlox",
         otherNames: ["Wild Blue Phlox"],
@@ -118,7 +118,7 @@ export const forbs: Plant[] = [{
         flowerColor: ["blue"],
         bloomMonths: ["apr", "may", "jun"],
 },{
-        id: "phlox-pilosa",
+        id: "phpi",
         scientificName: "Phlox pilosa",
         commonName: "Prairie Phlox",
         plantType: "forb",
@@ -129,7 +129,7 @@ export const forbs: Plant[] = [{
         flowerColor: ["pink"],
         bloomMonths: ["may", "jun", "jul"],
 },{
-        id: "physostegia-virginiana",
+        id: "phvi8",
         scientificName: "Physostegia virginiana",
         commonName: "Obedient Plant",
         plantType: "forb",
@@ -140,7 +140,7 @@ export const forbs: Plant[] = [{
         flowerColor: ["pink"],
         bloomMonths: ["aug", "sep"],
 },{
-        id: "polemonium-reptans",
+        id: "pore2",
         scientificName: "Polemonium reptans",
         commonName: "Jacob's Ladder",
         plantType: "forb",
@@ -151,7 +151,7 @@ export const forbs: Plant[] = [{
         flowerColor: ["blue"],
         bloomMonths: ["apr", "may", "jun"],
 },{
-        id: "potentilla-anserina",
+        id: "poan5",
         scientificName: "Potentilla anserina",
         commonName: "Silverweed",
         otherNames: ["Silverweed Cinquefoil"],
@@ -163,7 +163,7 @@ export const forbs: Plant[] = [{
         flowerColor: ["yellow"],
         bloomMonths: ["jun", "jul", "aug", "sep"],
 },{
-        id: "potentilla-simplex",
+        id: "posi2",
         scientificName: "Potentilla simplex",
         commonName: "Common Cinquefoil",
         plantType: "forb",
@@ -174,7 +174,7 @@ export const forbs: Plant[] = [{
         flowerColor: ["yellow"],
         bloomMonths: ["may", "jun", "jul"],
 },{
-        id: "pycnanthemum-virginianum",
+        id: "pyvi",
         scientificName: "Pycnanthemum virginianum",
         commonName: "Mountain Mint",
         plantType: "forb",
@@ -185,7 +185,7 @@ export const forbs: Plant[] = [{
         flowerColor: ["white"],
         bloomMonths: ["jun", "jul", "aug", "sep"],
 },{
-        id: "ratibida-pinnata",
+        id: "rapi",
         scientificName: "Ratibida pinnata",
         commonName: "Yellow Coneflower",
         plantType: "forb",
@@ -196,7 +196,7 @@ export const forbs: Plant[] = [{
         flowerColor: ["yellow"],
         bloomMonths: ["jul", "aug", "sep"],
 },{
-        id: "rudbeckia-fulgida",
+        id: "rufu2",
         scientificName: "Rudbeckia fulgida",
         commonName: "Black-eyed Susan",
         otherNames: ["Orange Coneflower"],
@@ -216,7 +216,7 @@ export const forbs: Plant[] = [{
              widthFt: 1.5,
         },
 },{
-        id: "rudbeckia-hirta",
+        id: "ruhi2",
         scientificName: "Rudbeckia hirta",
         commonName: "Black-eyed Susan",
         plantType: "forb",
@@ -230,7 +230,7 @@ export const forbs: Plant[] = [{
                 keystone: true,
         },
 },{
-        id: "ruellia-humilis",
+        id: "ruhu",
         scientificName: "Ruellia humilis",
         commonName: "Wild Petunia",
         plantType: "forb",
@@ -241,7 +241,7 @@ export const forbs: Plant[] = [{
         flowerColor: ["purple"],
         bloomMonths: ["jun", "jul", "aug"],
 },{
-        id: "senna-hebecarpa",
+        id: "sehe3",
         scientificName: "Senna hebecarpa",
         commonName: "Wild Senna",
         plantType: "forb",
@@ -252,7 +252,7 @@ export const forbs: Plant[] = [{
         flowerColor: ["yellow"],
         bloomMonths: ["jul", "aug"],
 },{
-        id: "silphium-terebinthinaceium",
+        id: "site",
         scientificName: "Silphium terebinthinaceum",
         commonName: "Prairie Dock",
         otherNames: ["Prairie Rosinweed"],
@@ -264,7 +264,7 @@ export const forbs: Plant[] = [{
         flowerColor: ["yellow"],
         bloomMonths: ["jul", "aug", "sep"],
 },{
-        id: "sisyrinchium-angustifolium",
+        id: "sian3",
         scientificName: "Sisyrinchium angustifolium",
         commonName: "Blue-eyed Grass",
         plantType: "forb",
@@ -275,7 +275,7 @@ export const forbs: Plant[] = [{
         flowerColor: ["blue"],
         bloomMonths: ["may", "jun"],
 },{
-        id: "solidago-caesia",
+        id: "soca4",
         scientificName: "Solidago caesia",
         commonName: "Blue-stemmed Goldenrod",
         otherNames: ["Wreath Goldenrod"],
@@ -290,7 +290,7 @@ export const forbs: Plant[] = [{
                 keystone: true,
         },
 },{
-        id: "solidago-flexicaulis",
+        id: "sofl2",
         scientificName: "Solidago flexicaulis",
         commonName: "Zigzag Goldenrod",
         plantType: "forb",
@@ -306,7 +306,7 @@ export const forbs: Plant[] = [{
              widthFt: 1.5,
         },
 },{
-        id: "solidago-nemoralis",
+        id: "sone",
         scientificName: "Solidago nemoralis",
         commonName: "Old Field Goldenrod",
         otherNames: ["Gray Goldenrod"],
@@ -321,7 +321,7 @@ export const forbs: Plant[] = [{
                 keystone: true,
         },
 },{
-        id: "oligoneuron-ohioense",
+        id: "oloh",
         scientificName: "Oligoneuron ohioense",
         commonName: "Ohio Goldenrod",
         plantType: "forb",
@@ -337,7 +337,7 @@ export const forbs: Plant[] = [{
              widthFt: 1.5,
         },
 },{
-        id: "oligoneuron-riddellii",
+        id: "olri2",
         scientificName: "Oligoneuron riddellii",
         commonName: "Riddell's Goldenrod",
         plantType: "forb",
@@ -348,7 +348,7 @@ export const forbs: Plant[] = [{
         flowerColor: ["yellow"],
         bloomMonths: ["aug", "sep", "oct"],
 },{
-        id: "oligoneuron-rigidum",
+        id: "olri",
         scientificName: "Oligoneuron rigidum",
         commonName: "Stiff Goldenrod",
         plantType: "forb",
@@ -359,7 +359,7 @@ export const forbs: Plant[] = [{
         flowerColor: ["yellow"],
         bloomMonths: ["aug", "sep", "oct"],
 },{
-        id: "stylophorum-diphyllum",
+        id: "stdi3",
         scientificName: "Stylophorum diphyllum",
         commonName: "Wood Poppy",
         otherNames: ["Celandine Poppy"],
@@ -371,7 +371,7 @@ export const forbs: Plant[] = [{
         flowerColor: ["yellow"],
         bloomMonths: ["apr", "may"],
 },{
-        id: "symphyotrichum-cordifolium",
+        id: "syco4",
         scientificName: "Symphyotrichum cordifolium",
         commonName: "Heart-leaved Aster",
         plantType: "forb",
@@ -382,7 +382,7 @@ export const forbs: Plant[] = [{
         flowerColor: ["blue"],
         bloomMonths: ["sep", "oct"],
 },{
-        id: "symphyotrichum-laeve",
+        id: "syla3",
         scientificName: "Symphyotrichum laeve",
         commonName: "Smooth Blue Aster",
         plantType: "forb",
@@ -401,7 +401,7 @@ export const forbs: Plant[] = [{
              widthFt: 1.75,
         },
 },{
-        id: "symphyotrichum-novae-angliae",
+        id: "syno2",
         scientificName: "Symphyotrichum novae-angliae",
         commonName: "New England Aster",
         plantType: "forb",
@@ -415,7 +415,7 @@ export const forbs: Plant[] = [{
                 keystone: true,
         },
 },{
-        id: "symphyotrichum-oolentangiense",
+        id: "syoo",
         scientificName: "Symphyotrichum oolentangiense",
         commonName: "Sky Blue Aster",
         otherNames: ["Prairie Heart-leaved Aster"],
@@ -427,7 +427,7 @@ export const forbs: Plant[] = [{
         flowerColor: ["blue"],
         bloomMonths: ["aug", "sep", "oct"],
 },{
-        id: "tephrosia-virginiana",
+        id: "tevi",
         scientificName: "Tephrosia virginiana",
         commonName: "Goat's Rue",
         plantType: "forb",
@@ -438,7 +438,7 @@ export const forbs: Plant[] = [{
         flowerColor: ["pink", "yellow"],
         bloomMonths: ["jun", "jul"],
 },{
-        id: "thalictrum-dasycarpum",
+        id: "thda",
         scientificName: "Thalictrum dasycarpum",
         commonName: "Tall Meadow Rue",
         otherNames: ["Purple Meadow Rue"],
@@ -450,7 +450,7 @@ export const forbs: Plant[] = [{
         flowerColor: ["white"],
         bloomMonths: ["jun", "jul"],
 },{
-        id: "thalictrum-dioicum",
+        id: "thdi",
         scientificName: "Thalictrum dioicum",
         commonName: "Early Meadow Rue",
         plantType: "forb",
@@ -461,7 +461,7 @@ export const forbs: Plant[] = [{
         flowerColor: ["green"],
         bloomMonths: ["apr", "may"],
 },{
-        id: "tiarella-cordifolia",
+        id: "tico",
         scientificName: "Tiarella cordifolia",
         commonName: "Foamflower",
         plantType: "forb",
@@ -472,7 +472,7 @@ export const forbs: Plant[] = [{
         flowerColor: ["white", "pink"],
         bloomMonths: ["apr", "may", "jun"],
 },{
-        id: "verbena-stricta",
+        id: "vest",
         scientificName: "Verbena stricta",
         commonName: "Hoary Vervain",
         plantType: "forb",
@@ -483,7 +483,7 @@ export const forbs: Plant[] = [{
         flowerColor: ["blue"],
         bloomMonths: ["jun", "jul", "aug", "sep"],
 },{
-        id: "vernonia-missurica",
+        id: "vemi2",
         scientificName: "Vernonia missurica",
         commonName: "Missouri Ironweed",
         plantType: "forb",
@@ -495,7 +495,7 @@ export const forbs: Plant[] = [{
         bloomMonths: ["jul", "aug", "sep", "oct"],
         notes: "This is a great sturdy plant and I love the blueish foliage with the dark purple flowers.",
 },{
-        id: "veronicastrum-virginicum",
+        id: "vevi4",
         scientificName: "Veronicastrum virginicum",
         commonName: "Culver's Root",
         plantType: "forb",
